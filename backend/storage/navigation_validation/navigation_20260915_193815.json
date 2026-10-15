@@ -1,0 +1,489 @@
+{
+  "started_at": "2026-09-15T14:08:16.916772+00:00",
+  "python": "3.12.2",
+  "selenium": "4.27.0",
+  "source_sha256": "9f9c2787bc2883f5e8f447f13d091bd2be5ff9ab7a3fa599d58e989a57fb4166",
+  "application_id": 7,
+  "order_actions_executed": false,
+  "runs": [
+    {
+      "number": 1,
+      "actions": [
+        {
+          "step": 8,
+          "label": "Navigator",
+          "original": [
+            "css selector",
+            "[title='Navigator']"
+          ],
+          "context": "main",
+          "original_matches": 1,
+          "original_visible_enabled": 1,
+          "alternatives": [],
+          "original_status": "PASS",
+          "selected": [
+            "css selector",
+            "[title='Navigator']"
+          ],
+          "element": {
+            "tag": "div",
+            "id": "drop_mainmenuParent",
+            "role": null,
+            "title": "Navigator",
+            "visible_text": "IFrame support is required to display this page.",
+            "text_content": "\n        \n          \n        \n        \n\n\n\n\n\n\n\nIFrame support is required to display this page.\n\n\t\n\t\n\t\n    \n\t\n\t\n\t\n\n\n\n\t\n\t\n\n\n\n\t\n\t\n\n\n\n\t\n\t\n\t\n\n\n\n\t\n\t\t\n\n\n\n\t\n\n\n\n\t\n\t\n\t\n\t\n\t\n    \n    \n    \n    \n    \n    \n    \n    \n    \n    \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n      var "
+          },
+          "click_executed": true,
+          "seconds": 1.64,
+          "next_menu_visible": true
+        },
+        {
+          "step": 9,
+          "label": "Baxter GM View",
+          "original": [
+            "xpath",
+            "//table[normalize-space()='Baxter GM View']"
+          ],
+          "context": "main",
+          "original_matches": 0,
+          "original_visible_enabled": 0,
+          "alternatives": [
+            {
+              "locator": [
+                "xpath",
+                "//span[normalize-space(.)='Baxter GM View']"
+              ],
+              "matches": 1,
+              "visible_enabled": 1
+            }
+          ],
+          "original_status": "FAIL",
+          "observed_candidates": [
+            {
+              "tag": "table",
+              "id": "menuItem12020287",
+              "role": null,
+              "title": null,
+              "visible_text": "  Baxter GM View\n   ",
+              "text_content": "\u00a0Baxter GM View\u00a0DocumentationTask Profile\u00a0"
+            },
+            {
+              "tag": "table",
+              "id": null,
+              "role": null,
+              "title": "Task Type:Task View, Fastpath Code: TV:120",
+              "visible_text": "Baxter GM View\n ",
+              "text_content": "Baxter GM View\u00a0DocumentationTask Profile"
+            },
+            {
+              "tag": "table",
+              "id": null,
+              "role": null,
+              "title": null,
+              "visible_text": "Baxter GM View\n ",
+              "text_content": "Baxter GM View\u00a0DocumentationTask Profile"
+            },
+            {
+              "tag": "span",
+              "id": "fldnode12020287",
+              "role": null,
+              "title": "Task Type:Task View, Fastpath Code: TV:120",
+              "visible_text": "Baxter GM View",
+              "text_content": "Baxter GM View"
+            }
+          ],
+          "selected": [
+            "xpath",
+            "//span[normalize-space(.)='Baxter GM View']"
+          ],
+          "element": {
+            "tag": "span",
+            "id": "fldnode12020287",
+            "role": null,
+            "title": "Task Type:Task View, Fastpath Code: TV:120",
+            "visible_text": "Baxter GM View",
+            "text_content": "Baxter GM View"
+          },
+          "click_executed": true,
+          "seconds": 1.47,
+          "next_menu_visible": true
+        },
+        {
+          "step": 10,
+          "label": "Sales",
+          "original": [
+            "xpath",
+            "//table[normalize-space()='Sales']"
+          ],
+          "context": "main",
+          "original_matches": 0,
+          "original_visible_enabled": 0,
+          "alternatives": [
+            {
+              "locator": [
+                "xpath",
+                "//span[normalize-space(.)='Sales']"
+              ],
+              "matches": 1,
+              "visible_enabled": 1
+            }
+          ],
+          "original_status": "FAIL",
+          "observed_candidates": [
+            {
+              "tag": "table",
+              "id": "menuItem12020296",
+              "role": null,
+              "title": null,
+              "visible_text": "  Sales\n   ",
+              "text_content": "\u00a0Sales\u00a0Add To FavoritesDocumentationTask Profile\u00a0"
+            },
+            {
+              "tag": "table",
+              "id": null,
+              "role": null,
+              "title": "Task Type: Non Software Task, Fastpath Code: SALES",
+              "visible_text": "Sales\n ",
+              "text_content": "Sales\u00a0Add To FavoritesDocumentationTask Profile"
+            },
+            {
+              "tag": "table",
+              "id": null,
+              "role": null,
+              "title": null,
+              "visible_text": "Sales\n ",
+              "text_content": "Sales\u00a0Add To FavoritesDocumentationTask Profile"
+            },
+            {
+              "tag": "span",
+              "id": "fldnode12020296",
+              "role": null,
+              "title": "Task Type: Non Software Task, Fastpath Code: SALES",
+              "visible_text": "Sales",
+              "text_content": "Sales"
+            }
+          ],
+          "selected": [
+            "xpath",
+            "//span[normalize-space(.)='Sales']"
+          ],
+          "element": {
+            "tag": "span",
+            "id": "fldnode12020296",
+            "role": null,
+            "title": "Task Type: Non Software Task, Fastpath Code: SALES",
+            "visible_text": "Sales",
+            "text_content": "Sales"
+          },
+          "click_executed": true,
+          "seconds": 1.73,
+          "next_menu_visible": true
+        },
+        {
+          "step": 11,
+          "label": "Sales Order Entry",
+          "original": [
+            "xpath",
+            "//table[normalize-space()='Sales Order Entry']"
+          ],
+          "context": "main",
+          "original_matches": 0,
+          "original_visible_enabled": 0,
+          "alternatives": [
+            {
+              "locator": [
+                "xpath",
+                "//span[normalize-space(.)='Sales Order Entry']"
+              ],
+              "matches": 1,
+              "visible_enabled": 1
+            }
+          ],
+          "original_status": "FAIL",
+          "observed_candidates": [
+            {
+              "tag": "table",
+              "id": "menuItem12020320",
+              "role": null,
+              "title": null,
+              "visible_text": "  Sales Order Entry\n   ",
+              "text_content": "\u00a0Sales Order Entry\u00a0Add To FavoritesDocumentationTask Profile\u00a0"
+            },
+            {
+              "tag": "table",
+              "id": null,
+              "role": null,
+              "title": "Task Type: Non Software Task, Fastpath Code: SOE",
+              "visible_text": "Sales Order Entry\n ",
+              "text_content": "Sales Order Entry\u00a0Add To FavoritesDocumentationTask Profile"
+            },
+            {
+              "tag": "table",
+              "id": null,
+              "role": null,
+              "title": null,
+              "visible_text": "Sales Order Entry\n ",
+              "text_content": "Sales Order Entry\u00a0Add To FavoritesDocumentationTask Profile"
+            },
+            {
+              "tag": "span",
+              "id": "fldnode12020320",
+              "role": null,
+              "title": "Task Type: Non Software Task, Fastpath Code: SOE",
+              "visible_text": "Sales Order Entry",
+              "text_content": "Sales Order Entry"
+            }
+          ],
+          "selected": [
+            "xpath",
+            "//span[normalize-space(.)='Sales Order Entry']"
+          ],
+          "element": {
+            "tag": "span",
+            "id": "fldnode12020320",
+            "role": null,
+            "title": "Task Type: Non Software Task, Fastpath Code: SOE",
+            "visible_text": "Sales Order Entry",
+            "text_content": "Sales Order Entry"
+          },
+          "click_executed": true,
+          "seconds": 1.81,
+          "next_menu_visible": true
+        },
+        {
+          "step": 13,
+          "label": "Standard Order SO",
+          "original": [
+            "xpath",
+            "//a[normalize-space()='Standard Order SO']"
+          ],
+          "context": "main",
+          "original_matches": 1,
+          "original_visible_enabled": 1,
+          "alternatives": [],
+          "original_status": "PASS",
+          "selected": [
+            "xpath",
+            "//a[normalize-space()='Standard Order SO']"
+          ],
+          "element": {
+            "tag": "a",
+            "id": "fldnode12020359",
+            "role": null,
+            "title": "Application: P4210, Form: W4210E, Version: BXEUIT01J",
+            "visible_text": "Standard Order SO",
+            "text_content": "Standard Order SO"
+          },
+          "click_executed": true,
+          "seconds": 1.28,
+          "next_screen_verified": true
+        }
+      ],
+      "frame": {
+        "original": [
+          "css selector",
+          "iframe[name='Main Application']"
+        ],
+        "terminal_control": [
+          "css selector",
+          "[title='Add (Ctrl+Alt+A)']"
+        ],
+        "original_matches": 0,
+        "observed_frames": [
+          {
+            "id": "LOGOUT_IFRAME",
+            "name": "LOGOUT_IFRAME",
+            "title": "Sign Out"
+          },
+          {
+            "id": "RunAppHiddenIframe",
+            "name": "RunAppHiddenIframe",
+            "title": "RunAppHiddenIframe"
+          },
+          {
+            "id": "SilentOCLIFrame",
+            "name": "SilentOCLIFrame",
+            "title": "SilentOCLIFrame"
+          },
+          {
+            "id": "RecentReportsIFrame",
+            "name": "RecentReportsIFrame",
+            "title": "RecentReportsIFrame"
+          },
+          {
+            "id": "e1MRoleIframe",
+            "name": "e1MRoleIframe",
+            "title": "e1MRoleIframe"
+          },
+          {
+            "id": "e1MTreeIframe",
+            "name": "e1MTreeIframe",
+            "title": "e1MTreeIframe"
+          },
+          {
+            "id": "E1MFastpathHiddenIframe",
+            "name": "E1MFastpathHiddenIframe",
+            "title": "E1MFastpathHiddenIframe"
+          },
+          {
+            "id": "e1MTreeIframe1",
+            "name": "e1MTreeIframe1",
+            "title": "e1MTreeIframe1"
+          },
+          {
+            "id": "e1BreadcrumbIframe",
+            "name": "e1BreadcrumbIframe",
+            "title": "e1BreadcrumbIframe"
+          },
+          {
+            "id": "e1menuAppIframe",
+            "name": "e1menuAppIframe",
+            "title": "Main Application"
+          },
+          {
+            "id": "e1ExternalAppIframe",
+            "name": "e1ExternalAppIframe",
+            "title": "e1ExternalAppIframe"
+          },
+          {
+            "id": "defaultGlobalMaskFrame",
+            "name": null,
+            "title": null
+          }
+        ],
+        "selected": [
+          "xpath",
+          "//iframe[@title='Main Application']"
+        ],
+        "original_status": "FAIL",
+        "terminal_status": "PASS",
+        "terminal_element": {
+          "tag": "img",
+          "id": "hc_Add",
+          "role": "button",
+          "title": "Add (Ctrl+Alt+A)",
+          "visible_text": "",
+          "text_content": ""
+        },
+        "inquiry_text_present": true
+      },
+      "navigation_verified": true
+    },
+    {
+      "number": 2,
+      "actions": [
+        {
+          "step": 8,
+          "label": "Navigator",
+          "original": [
+            "css selector",
+            "[title='Navigator']"
+          ],
+          "context": "main",
+          "original_matches": 1,
+          "original_visible_enabled": 1,
+          "alternatives": [],
+          "original_status": "PASS",
+          "selected": [
+            "css selector",
+            "[title='Navigator']"
+          ],
+          "element": {
+            "tag": "div",
+            "id": "drop_mainmenuParent",
+            "role": null,
+            "title": "Navigator",
+            "visible_text": "IFrame support is required to display this page.",
+            "text_content": "\n        \n          \n        \n        \n\n\n\n\n\n\n\nIFrame support is required to display this page.\n\n\t\n\t\n\t\n    \n\t\n\t\n\t\n\n\n\n\t\n\t\n\n\n\n\t\n\t\n\n\n\n\t\n\t\n\t\n\n\n\n\t\n\t\t\n\n\n\n\t\n\n\n\n\t\n\t\n\t\n\t\n\t\n    \n    \n    \n    \n    \n    \n    \n    \n    \n    \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n      var "
+          },
+          "click_executed": true,
+          "seconds": 1.67,
+          "next_menu_visible": true
+        },
+        {
+          "step": 9,
+          "label": "Baxter GM View",
+          "original": [
+            "xpath",
+            "//table[normalize-space()='Baxter GM View']"
+          ],
+          "context": "main",
+          "original_matches": 0,
+          "original_visible_enabled": 0,
+          "alternatives": [
+            {
+              "locator": [
+                "xpath",
+                "//span[normalize-space(.)='Baxter GM View']"
+              ],
+              "matches": 1,
+              "visible_enabled": 1
+            }
+          ],
+          "original_status": "FAIL",
+          "observed_candidates": [
+            {
+              "tag": "table",
+              "id": "menuItem12020287",
+              "role": null,
+              "title": null,
+              "visible_text": "  Baxter GM View\n   ",
+              "text_content": "\u00a0Baxter GM View\u00a0DocumentationTask Profile\u00a0"
+            },
+            {
+              "tag": "table",
+              "id": null,
+              "role": null,
+              "title": "Task Type:Task View, Fastpath Code: TV:120",
+              "visible_text": "Baxter GM View\n ",
+              "text_content": "Baxter GM View\u00a0DocumentationTask Profile"
+            },
+            {
+              "tag": "table",
+              "id": null,
+              "role": null,
+              "title": null,
+              "visible_text": "Baxter GM View\n ",
+              "text_content": "Baxter GM View\u00a0DocumentationTask Profile"
+            },
+            {
+              "tag": "span",
+              "id": "fldnode12020287",
+              "role": null,
+              "title": "Task Type:Task View, Fastpath Code: TV:120",
+              "visible_text": "Baxter GM View",
+              "text_content": "Baxter GM View"
+            },
+            {
+              "tag": "div",
+              "id": "bcroot12020287LabelHost",
+              "role": "menuitem",
+              "title": null,
+              "visible_text": "Baxter GM View",
+              "text_content": "Baxter GM View  "
+            }
+          ],
+          "selected": [
+            "xpath",
+            "//span[normalize-space(.)='Baxter GM View']"
+          ],
+          "element": {
+            "tag": "span",
+            "id": "fldnode12020287",
+            "role": null,
+            "title": "Task Type:Task View, Fastpath Code: TV:120",
+            "visible_text": "Baxter GM View",
+            "text_content": "Baxter GM View"
+          },
+          "click_executed": true,
+          "seconds": 1.25
+        }
+      ]
+    }
+  ],
+  "chrome": "151.0.7922.170",
+  "navigation_verified": false,
+  "error_type": "AssertionError",
+  "error": "No unique observed navigation target: {\"step\": 10, \"label\": \"Sales\", \"original\": [\"xpath\", \"//table[normalize-space()='Sales']\"], \"context\": \"main\", \"original_matches\": 0, \"original_visible_enabled\": 0, \"alternatives\": [], \"original_status\": \"FAIL\", \"observed_candidates\": [{\"tag\": \"div\", \"id\": \"bcroot12020296LabelHost\", \"role\": \"menuitem\", \"title\": null, \"visible_text\": \"Sales\", \"text_content\": \"Sales  \"}]}",
+  "screenshot": "backend\\storage\\navigation_validation\\navigation_20260915_193815.png"
+}

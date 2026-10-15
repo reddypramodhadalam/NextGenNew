@@ -1,0 +1,30 @@
+{
+  "started_at": "2026-09-15T15:44:01.480122+00:00",
+  "application_id": 7,
+  "proposal_id": 328,
+  "map_id": 71,
+  "stored_protocol_changed": false,
+  "original_final_step": {
+    "n": 34,
+    "step": "34. Wait for 5 seconds for the Sales Order to be fully saved.",
+    "action": null,
+    "matched": true,
+    "expected": "The Sales Order is fully saved. The system displays the completed Sales Order with the system-generated Order Number, confirming successful creation of the Standard Order SO.",
+    "data_input": null,
+    "element_hint": "input: Order Number (ifr-e1menuAppIframe-el-57)",
+    "wait_condition": "none"
+  },
+  "user_approved_review_endpoint": {
+    "n": 34,
+    "step": "Wait for the Order Acceptance screen. Do not submit the order.",
+    "action": null,
+    "matched": true,
+    "expected": "Order Acceptance is displayed and Place Order is visible. Final submission is outside this test.",
+    "data_input": null,
+    "element_hint": "Place Order",
+    "wait_condition": "element_visible"
+  },
+  "steps": [],
+  "order_submission_verified": false,
+  "generation_status": "incomplete"
+}

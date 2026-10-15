@@ -1,0 +1,222 @@
+/* globals.css — Kavach design system
+ * Professional B2B test-intelligence platform. Light + dark mode.
+ *
+ * IMPORTANT: class names (.btn, .card, .badge-*, .table, .skeleton…)
+ * are kept identical to the previous globals.css so existing pages
+ * (dashboard, new-test-suite) keep working. Only the tokens and the
+ * visual treatment changed. Theme is switched by setting
+ * data-theme="light|dark" on <html>.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ─── Shared, theme-independent tokens ─────────────────────────────── */
+:root {
+  --indigo-deep: #252969;   /* Baxter brand */
+  --indigo:      #154898;
+  --accent:      #4f7cff;   /* electric blue — primary action */
+  --accent-hover:#3d6bf0;
+  --accent-glow: rgba(79, 124, 255, 0.20);
+  --shield:      #6366f1;
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* Type scale: use these instead of ad-hoc pixel sizes. */
+  --text-micro:   11px;   /* tiny uppercase labels, table headers, chips */
+  --text-small:   12px;   /* captions, hints, labels, badges, legends, meta */
+  --text-body:    14px;   /* content: paragraphs, tables, inputs, buttons, menus */
+  --text-heading: 16px;   /* headings: card, panel, section and modal titles */
+  --text-title:   26px;   /* page titles */
+
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px;
+  --radius-sm: 8px; --radius: 12px; --radius-lg: 16px;
+  --transition: all 0.15s ease;
+
+  /* legacy alias names still referenced by old pages */
+  --purple: var(--accent);
+  --purple-hover: var(--accent-hover);
+  --purple-light: var(--accent);
+  --purple-dim: var(--accent-glow);
+  --cyan: #22d3ee;
+  --cyan-dim: rgba(34, 211, 238, 0.10);
+}
+
+/* ─── DARK (default) ───────────────────────────────────────────────── */
+:root, [data-theme="dark"] {
+  --bg-base:     #0b0d17;
+  --bg-sidebar:  #0d0f1a;
+  --bg-card:     #151826;
+  --bg-card-alt: #1a1e2e;
+  --bg-input:    #0e1019;
+
+  --text-primary:   #eef1f8;
+  --text-secondary: #a4acc4;
+  --text-muted:     #808aa6;
+  --text-dimmer:    #5f6885;
+
+  --border:        #232838;
+  --border-strong: #2e3448;
+
+  --green: #34d399; --amber: #fbbf24; --red: #fb7185;
+  --green-bg: rgba(52,211,153,0.12);
+  --amber-bg: rgba(251,191,36,0.12);
+  --red-bg:   rgba(251,113,133,0.12);
+  --skip: #94a3b8;
+
+  --shadow: 0 1px 3px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.28);
+}
+
+/* ─── LIGHT ────────────────────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg-base:     #f6f7fb;
+  --bg-sidebar:  #ffffff;
+  --bg-card:     #ffffff;
+  --bg-card-alt: #fbfcfe;
+  --bg-input:    #f2f4f9;
+
+  --text-primary:   #161a2b;
+  --text-secondary: #545b74;
+  --text-muted:     #8a91a8;
+  --text-dimmer:    #a6acc0;
+
+  --border:        #e6e9f2;
+  --border-strong: #d4d9e8;
+
+  --green: #059669; --amber: #d97706; --red: #e11d48;
+  --green-bg: rgba(5,150,105,0.10);
+  --amber-bg: rgba(217,119,6,0.10);
+  --red-bg:   rgba(225,29,72,0.10);
+  --skip: #64748b;
+
+  --shadow: 0 1px 2px rgba(27,31,50,0.07), 0 6px 20px rgba(27,31,50,0.06);
+}
+
+/* ─── Reset ────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  line-height: 1.5; min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ─── Typography ───────────────────────────────────────────────────── */
+h1 { font-family: var(--font-display); font-size: 26px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.15; color: var(--text-primary); }
+h2 { font-family: var(--font-display); font-size: 16px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.3; color: var(--text-primary); }
+h3 { font-size: 16px; font-weight: 600; line-height: 1.4; color: var(--text-primary); }
+h4 { font-size: 14px; font-weight: 500; line-height: 1.4; color: var(--text-secondary); }
+p  { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+a  { color: var(--accent); text-decoration: none; transition: var(--transition); }
+a:hover { filter: brightness(1.15); }
+
+/* ─── Buttons (names preserved) ────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  padding: 8px 16px; border-radius: var(--radius-sm);
+  font-size: 14px; font-weight: 600; font-family: var(--font-body);
+  cursor: pointer; transition: var(--transition); border: none; outline: none;
+  white-space: nowrap; letter-spacing: -0.1px;
+}
+.btn svg { width: 16px; height: 16px; }
+.btn-primary { background: var(--accent); color: #fff; box-shadow: 0 2px 12px var(--accent-glow); }
+.btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(0); }
+.btn-secondary { background: var(--bg-card-alt); color: var(--text-primary); border: 1px solid var(--border); }
+.btn-secondary:hover { border-color: var(--border-strong); background: var(--bg-card); }
+.btn-ghost { background: transparent; color: var(--text-secondary); border: 1px solid var(--border); }
+.btn-ghost:hover { background: var(--bg-card-alt); color: var(--text-primary); border-color: var(--border-strong); }
+.btn-danger { background: transparent; color: var(--red); border: 1px solid transparent; }
+.btn-danger:hover { background: var(--red-bg); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-icon {
+  width: 37px; height: 37px; padding: 0; justify-content: center;
+  border-radius: var(--radius-sm); background: var(--bg-card);
+  border: 1px solid var(--border); color: var(--text-secondary);
+}
+.btn-icon:hover { color: var(--text-primary); border-color: var(--border-strong); background: var(--bg-card-alt); }
+
+/* ─── Card (names preserved) ───────────────────────────────────────── */
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); }
+.card-header { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; border-bottom: 1px solid var(--border); }
+.card-title    { font-size: 16px; font-weight: 600; color: var(--text-primary); }
+.card-subtitle { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+/* ─── Badges (names preserved) ─────────────────────────────────────── */
+.badge { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; padding: 4px 10px; border-radius: 20px; }
+.badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.badge-green  { background: var(--green-bg); color: var(--green); }
+.badge-amber  { background: var(--amber-bg); color: var(--amber); }
+.badge-red    { background: var(--red-bg);   color: var(--red); }
+.badge-purple { background: var(--accent-glow); color: var(--accent); }
+.badge-gray   { background: var(--bg-input);  color: var(--text-muted); }
+
+/* ─── Table (names preserved) ──────────────────────────────────────── */
+.table-wrapper { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; }
+.table th {
+  text-align: left; font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--text-muted); font-weight: 600; padding: 12px 20px; border-bottom: 1px solid var(--border);
+}
+.table td { padding: 15px 20px; border-bottom: 1px solid var(--border); font-size: 14px; color: var(--text-secondary); }
+.table tr { transition: background 0.12s; }
+.table tbody tr:hover td { background: var(--bg-card-alt); }
+.table tr:last-child td { border-bottom: none; }
+
+/* ─── Inputs ───────────────────────────────────────────────────────── */
+.input {
+  background: var(--bg-input); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 9px 13px; font-size: 14px; color: var(--text-primary); font-family: var(--font-body);
+  outline: none; transition: var(--transition);
+}
+.input:focus { border-color: var(--accent); }
+.input::placeholder { color: var(--text-dimmer); }
+
+/* ─── Skeleton ─────────────────────────────────────────────────────── */
+.skeleton {
+  background: linear-gradient(90deg, var(--bg-card-alt) 25%, var(--bg-input) 50%, var(--bg-card-alt) 75%);
+  background-size: 200% 100%; animation: shimmer 1.4s infinite; border-radius: var(--radius-sm);
+}
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+/* ─── Utilities used by pages ──────────────────────────────────────── */
+.text-secondary { color: var(--text-secondary); }
+.text-muted { color: var(--text-muted); }
+.text-primary { color: var(--text-primary); }
+
+/* ─── Form controls (used by new-test-suite and other older pages) ─── */
+.form-group { margin-bottom: var(--space-5); }
+.form-label {
+  display: block; font-size: 14px; font-weight: 500; color: var(--text-secondary);
+  margin-bottom: var(--space-2);
+}
+.form-input, .form-select, .form-textarea {
+  width: 100%; background: var(--bg-input); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 10px 13px; font-size: 14px;
+  color: var(--text-primary); font-family: var(--font-body); outline: none;
+  transition: var(--transition);
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--accent); }
+.form-input::placeholder { color: var(--text-dimmer); }
+.form-hint { font-size: 12px; color: var(--text-muted); margin-top: 6px; line-height: 1.5; }
+.form-error { font-size: 14px; color: var(--red); margin-top: 6px; }
+
+/* ─── Tabler-icon fallback ─────────────────────────────────────────────
+   Older pages reference `ti ti-*` icon-font classes. Rather than pull in
+   the whole icon font, render them as a small neutral glyph slot so the
+   layout is never broken by a missing font. (Real icons come from inline
+   SVGs in the new components.) */
+[class^="ti ti-"], [class*=" ti-"] {
+  display: inline-block; width: 1em; height: 1em; vertical-align: -0.125em;
+}
+
+/* Form controls follow the page font instead of the browser default. */
+button, input, select, textarea { font-family: var(--font-body); }
+
+/* Equal-width digits so numbers line up in table columns. */
+.table td, .table th { font-variant-numeric: tabular-nums; }
+

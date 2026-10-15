@@ -1,0 +1,340 @@
+{
+  "started_at": "2026-09-15T14:32:51.456530+00:00",
+  "application_id": 7,
+  "proposal_id": 328,
+  "map_id": 71,
+  "python": "3.12.2",
+  "selenium": "4.27.0",
+  "script_sha256": "9f9c2787bc2883f5e8f447f13d091bd2be5ff9ab7a3fa599d58e989a57fb4166",
+  "substitutions": [
+    {
+      "line": 271,
+      "original": [
+        "xpath",
+        "//table[normalize-space()='Baxter GM View']"
+      ],
+      "replacement": [
+        "xpath",
+        "//span[normalize-space(.)='Baxter GM View']"
+      ]
+    },
+    {
+      "line": 288,
+      "original": [
+        "xpath",
+        "//table[normalize-space()='Sales']"
+      ],
+      "replacement": [
+        "xpath",
+        "//span[normalize-space(.)='Sales']"
+      ]
+    },
+    {
+      "line": 305,
+      "original": [
+        "xpath",
+        "//table[normalize-space()='Sales Order Entry']"
+      ],
+      "replacement": [
+        "xpath",
+        "//span[normalize-space(.)='Sales Order Entry']"
+      ]
+    },
+    {
+      "line": 340,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 349,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 366,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 375,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 392,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 410,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 426,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 435,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 452,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 470,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 486,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 504,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 513,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 534,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 553,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 568,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 578,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 600,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 616,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "action": "Launch the URL https://e1euut.aws.baxter.com/jde/E1Menu.maf in the browser.",
+      "expected": "The JD Edwards SSO login page is displayed.",
+      "status": "executed",
+      "started_at": "2026-09-15T14:33:24.152742+00:00",
+      "screenshot": "step_01.png",
+      "duration_seconds": 0.72
+    },
+    {
+      "n": 2,
+      "action": "Enter the SSO Username in the username field.",
+      "status": "reported_skipped_by_original",
+      "reason": "element not found \u2014 SSO handled in preamble"
+    },
+    {
+      "n": 3,
+      "action": "Click the Next button on SSO login page.",
+      "expected": "The page advances to the password entry step.",
+      "status": "executed",
+      "started_at": "2026-09-15T14:33:24.909178+00:00",
+      "screenshot": "step_03.png",
+      "duration_seconds": 0.59
+    },
+    {
+      "n": 4,
+      "action": "Enter the SSO Password in the password field.",
+      "status": "reported_skipped_by_original",
+      "reason": "element not found \u2014 SSO handled in preamble"
+    },
+    {
+      "n": 5,
+      "action": "Click the Sign in button on SSO login page.",
+      "expected": "Authentication is initiated and the MFA or confirmation prompt is displayed.",
+      "status": "executed",
+      "started_at": "2026-09-15T14:33:25.524929+00:00",
+      "screenshot": "step_05.png",
+      "duration_seconds": 0.36
+    },
+    {
+      "n": 6,
+      "action": "Click the Yes button on the Stay signed in prompt.",
+      "status": "reported_skipped_by_original",
+      "reason": "element not found \u2014 KMSI handled in preamble"
+    },
+    {
+      "n": 7,
+      "action": "Wait for 10 seconds for the JD Edwards home page to fully load.",
+      "expected": "The JD Edwards home page is fully loaded with the Navigator menu visible.",
+      "status": "executed",
+      "started_at": "2026-09-15T14:33:25.901361+00:00",
+      "screenshot": "step_07.png",
+      "duration_seconds": 10.23
+    },
+    {
+      "n": 8,
+      "action": "Click the Navigator menu item.",
+      "expected": "The Navigator panel expands showing available menu groups including Baxter GM View.",
+      "status": "failed",
+      "started_at": "2026-09-15T14:33:36.148555+00:00",
+      "error_type": "TimeoutException",
+      "screenshot": "step_08.png",
+      "duration_seconds": 20.64
+    }
+  ],
+  "data_key_alias_resolution": [
+    {
+      "requested": "username",
+      "configured_keys": [
+        "username"
+      ]
+    },
+    {
+      "requested": "password",
+      "configured_keys": [
+        "password"
+      ]
+    }
+  ],
+  "complete_business_verification": false,
+  "chrome": "151.0.7922.170",
+  "diagnostic_replay_completed": false,
+  "failure_step": 8,
+  "error_type": "TimeoutException",
+  "final_screenshot": "step_99.png",
+  "script_unchanged": true
+}

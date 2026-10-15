@@ -1,0 +1,205 @@
+{
+  "started_at": "2026-09-15T16:54:16.964011+00:00",
+  "application_id": 7,
+  "proposal_id": 328,
+  "map_id": 71,
+  "stored_protocol_changed": false,
+  "original_final_step": {
+    "n": 34,
+    "step": "34. Wait for 5 seconds for the Sales Order to be fully saved.",
+    "action": null,
+    "matched": true,
+    "expected": "The Sales Order is fully saved. The system displays the completed Sales Order with the system-generated Order Number, confirming successful creation of the Standard Order SO.",
+    "data_input": null,
+    "element_hint": "input: Order Number (ifr-e1menuAppIframe-el-57)",
+    "wait_condition": "none"
+  },
+  "user_approved_review_endpoint": {
+    "n": 34,
+    "step": "Wait for the Order Acceptance screen. Do not submit the order.",
+    "action": null,
+    "matched": true,
+    "expected": "Order Acceptance is displayed and Place Order is visible. Final submission is outside this test.",
+    "data_input": null,
+    "element_hint": "Place Order",
+    "wait_condition": "element_visible"
+  },
+  "steps": [
+    {
+      "n": 1,
+      "action": "1. Launch the URL https://e1euut.aws.baxter.com/jde/E1Menu.maf in the browser.",
+      "expected": "The JD Edwards SSO login page is displayed.",
+      "status": "passed",
+      "runtime_events": [],
+      "duration_seconds": 26.08,
+      "screenshot": "step_01.png"
+    },
+    {
+      "n": 2,
+      "action": "2. Enter the SSO Username in the username field.",
+      "expected": "The SSO username is entered in the username field.",
+      "status": "handled_by_preamble",
+      "runtime_events": [
+        {
+          "operation": "sso_preamble_handled",
+          "independent_step_assertion": false
+        }
+      ],
+      "duration_seconds": 0.38,
+      "screenshot": "step_02.png"
+    },
+    {
+      "n": 3,
+      "action": "3. Click the Next button.",
+      "expected": "The page advances to the password entry step.",
+      "status": "handled_by_preamble",
+      "runtime_events": [
+        {
+          "operation": "sso_preamble_handled",
+          "independent_step_assertion": false
+        }
+      ],
+      "duration_seconds": 0.05,
+      "screenshot": "step_03.png"
+    },
+    {
+      "n": 4,
+      "action": "4. Enter the SSO Password in the password field.",
+      "expected": "The SSO password is entered in the password field.",
+      "status": "handled_by_preamble",
+      "runtime_events": [
+        {
+          "operation": "sso_preamble_handled",
+          "independent_step_assertion": false
+        }
+      ],
+      "duration_seconds": 0.06,
+      "screenshot": "step_04.png"
+    },
+    {
+      "n": 5,
+      "action": "5. Click the Sign in button.",
+      "expected": "Authentication is initiated and the MFA or confirmation prompt is displayed.",
+      "status": "handled_by_preamble",
+      "runtime_events": [
+        {
+          "operation": "sso_preamble_handled",
+          "independent_step_assertion": false
+        }
+      ],
+      "duration_seconds": 0.05,
+      "screenshot": "step_05.png"
+    },
+    {
+      "n": 6,
+      "action": "6. Click the Yes button on the Stay signed in prompt.",
+      "expected": "The JD Edwards home screen (E1Menu) is displayed.",
+      "status": "handled_by_preamble",
+      "runtime_events": [
+        {
+          "operation": "sso_preamble_handled",
+          "independent_step_assertion": false
+        }
+      ],
+      "duration_seconds": 0.06,
+      "screenshot": "step_06.png"
+    },
+    {
+      "n": 7,
+      "action": "7. Wait for 10 seconds for the JD Edwards home page to fully load.",
+      "expected": "The JD Edwards home page is fully loaded with the Navigator menu visible.",
+      "status": "passed",
+      "runtime_events": [],
+      "duration_seconds": 11.08,
+      "screenshot": "step_07.png"
+    },
+    {
+      "n": 8,
+      "action": "8. Click the Navigator menu item (el-23).",
+      "expected": "The Navigator panel expands showing available menu groups including Baxter GM View.",
+      "status": "passed",
+      "runtime_events": [
+        {
+          "operation": "click",
+          "target": "target_3"
+        }
+      ],
+      "duration_seconds": 2.52,
+      "screenshot": "step_08.png"
+    },
+    {
+      "n": 9,
+      "action": "9. Click on Baxter GM View (el-60).",
+      "expected": "The Baxter GM View menu group expands showing sub-menus including Sales.",
+      "status": "passed",
+      "runtime_events": [
+        {
+          "operation": "click",
+          "target": "target_214"
+        }
+      ],
+      "duration_seconds": 4.97,
+      "screenshot": "step_09.png"
+    },
+    {
+      "n": 10,
+      "action": "10. Click on Sales (el-173).",
+      "expected": "The Sales sub-menu expands showing options including Sales Order Entry.",
+      "status": "passed",
+      "runtime_events": [
+        {
+          "operation": "click",
+          "target": "target_215"
+        }
+      ],
+      "duration_seconds": 4.42,
+      "screenshot": "step_10.png"
+    },
+    {
+      "n": 11,
+      "action": "11. Click on Sales Order Entry (el-341).",
+      "expected": "The Sales Order Entry sub-menu expands showing order type options including Standard Order SO.",
+      "status": "passed",
+      "runtime_events": [
+        {
+          "operation": "click",
+          "target": "target_216"
+        }
+      ],
+      "duration_seconds": 5.0,
+      "screenshot": "step_11.png"
+    },
+    {
+      "n": 12,
+      "action": "12. Wait for 5 seconds for the Sales Order Entry menu to fully render.",
+      "expected": "The Sales Order Entry options are fully visible.",
+      "status": "passed",
+      "runtime_events": [],
+      "duration_seconds": 6.52,
+      "screenshot": "step_12.png"
+    },
+    {
+      "n": 13,
+      "action": "13. Click on Standard Order SO (el-552).",
+      "expected": "The Standard Order SO - Customer Service Inquiry screen is displayed.",
+      "status": "failed",
+      "error_type": "TimeoutException",
+      "runtime_events": [
+        {
+          "operation": "click",
+          "target": "target_82"
+        }
+      ],
+      "duration_seconds": 62.98,
+      "screenshot": "step_13.png"
+    }
+  ],
+  "generation_entry_point": "prototype",
+  "order_submission_verified": false,
+  "generated_sha256": "2158908e248f2c00fdeac34fa3affe53a5d183a9719e6364fa9e3d1e8a97765d",
+  "generation_status": "runtime_failed",
+  "browser_version": "151.0.7922.170",
+  "review_workflow_passed": false,
+  "error_type": "TimeoutException",
+  "generated_artifact_unchanged": true
+}

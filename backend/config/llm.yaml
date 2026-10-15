@@ -1,0 +1,27 @@
+# llm.yaml
+# LLM provider settings. All sensitive values come from environment
+# variables — nothing is hardcoded here.
+
+provider:
+  # Which provider adapter to use.
+  # Supported: "gemini" | "openai" | "bedrock"
+  # The URL, key, and model are always read from environment variables
+  # (LLM_API_URL, LLM_API_KEY, LLM_MODEL) — this field just selects
+  # which adapter class handles the request/response format.
+  type: "${LLM_PROVIDER_TYPE:gemini}"
+
+retry:
+  max_retries: 3
+  server_error_backoff_seconds: [2, 4, 8]
+  # Rate-limit retry: honors the API's own suggested delay.
+  # If the API does not return a suggested delay, falls back to this value.
+  rate_limit_fallback_seconds: 60
+
+timeouts:
+  per_step_seconds: 30
+
+langfuse:
+  # Both values come from environment variables.
+  # If either is empty, Langfuse is disabled — no error, no logging.
+  url_env_var: "LANGFUSE_URL"
+  key_env_var: "LANGFUSE_API_KEY"

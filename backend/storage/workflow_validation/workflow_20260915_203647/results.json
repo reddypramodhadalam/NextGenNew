@@ -1,0 +1,742 @@
+{
+  "started_at": "2026-09-15T15:06:49.009441+00:00",
+  "application_id": 7,
+  "proposal_id": 328,
+  "map_id": 71,
+  "python": "3.12.2",
+  "selenium": "4.27.0",
+  "script_sha256": "9f9c2787bc2883f5e8f447f13d091bd2be5ff9ab7a3fa599d58e989a57fb4166",
+  "substitutions": [
+    {
+      "line": 262,
+      "original": [
+        "xpath",
+        "//table[normalize-space()='Baxter GM View']"
+      ],
+      "replacement": [
+        "xpath",
+        "//span[normalize-space(.)='Baxter GM View']"
+      ]
+    },
+    {
+      "line": 271,
+      "original": [
+        "xpath",
+        "//table[normalize-space()='Baxter GM View']"
+      ],
+      "replacement": [
+        "xpath",
+        "//span[normalize-space(.)='Baxter GM View']"
+      ]
+    },
+    {
+      "line": 279,
+      "original": [
+        "xpath",
+        "//table[normalize-space()='Sales']"
+      ],
+      "replacement": [
+        "xpath",
+        "//span[normalize-space(.)='Sales']"
+      ]
+    },
+    {
+      "line": 288,
+      "original": [
+        "xpath",
+        "//table[normalize-space()='Sales']"
+      ],
+      "replacement": [
+        "xpath",
+        "//span[normalize-space(.)='Sales']"
+      ]
+    },
+    {
+      "line": 296,
+      "original": [
+        "xpath",
+        "//table[normalize-space()='Sales Order Entry']"
+      ],
+      "replacement": [
+        "xpath",
+        "//span[normalize-space(.)='Sales Order Entry']"
+      ]
+    },
+    {
+      "line": 305,
+      "original": [
+        "xpath",
+        "//table[normalize-space()='Sales Order Entry']"
+      ],
+      "replacement": [
+        "xpath",
+        "//span[normalize-space(.)='Sales Order Entry']"
+      ]
+    },
+    {
+      "line": 340,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 349,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 366,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 375,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 392,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 400,
+      "original": "element.clear()",
+      "replacement": "click, Ctrl+A, then original send_keys"
+    },
+    {
+      "line": 410,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 426,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 435,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 452,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 460,
+      "original": "element.clear()",
+      "replacement": "click, Ctrl+A, then original send_keys"
+    },
+    {
+      "line": 470,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 486,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 494,
+      "original": "element.clear()",
+      "replacement": "click, Ctrl+A, then original send_keys"
+    },
+    {
+      "line": 504,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 513,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 534,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 553,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 568,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 578,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 586,
+      "original": "element.clear()",
+      "replacement": "click, Ctrl+A, then original send_keys"
+    },
+    {
+      "line": 600,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    },
+    {
+      "line": 616,
+      "original": [
+        "css selector",
+        "iframe[name='Main Application']"
+      ],
+      "replacement": [
+        "xpath",
+        "//iframe[@title='Main Application']"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "action": "Launch the URL https://e1euut.aws.baxter.com/jde/E1Menu.maf in the browser.",
+      "expected": "The JD Edwards SSO login page is displayed.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:15.662401+00:00",
+      "screenshot": "step_01.png",
+      "duration_seconds": 0.3
+    },
+    {
+      "n": 2,
+      "action": "Enter the SSO Username in the username field.",
+      "status": "reported_skipped_by_original",
+      "reason": "element not found \u2014 SSO handled in preamble"
+    },
+    {
+      "n": 3,
+      "action": "Click the Next button on SSO login page.",
+      "expected": "The page advances to the password entry step.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:15.993321+00:00",
+      "screenshot": "step_03.png",
+      "duration_seconds": 1.03
+    },
+    {
+      "n": 4,
+      "action": "Enter the SSO Password in the password field.",
+      "status": "reported_skipped_by_original",
+      "reason": "element not found \u2014 SSO handled in preamble"
+    },
+    {
+      "n": 5,
+      "action": "Click the Sign in button on SSO login page.",
+      "expected": "Authentication is initiated and the MFA or confirmation prompt is displayed.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:17.043032+00:00",
+      "screenshot": "step_05.png",
+      "duration_seconds": 0.19
+    },
+    {
+      "n": 6,
+      "action": "Click the Yes button on the Stay signed in prompt.",
+      "status": "reported_skipped_by_original",
+      "reason": "element not found \u2014 KMSI handled in preamble"
+    },
+    {
+      "n": 7,
+      "action": "Wait for 10 seconds for the JD Edwards home page to fully load.",
+      "expected": "The JD Edwards home page is fully loaded with the Navigator menu visible.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:17.248793+00:00",
+      "screenshot": "step_07.png",
+      "duration_seconds": 10.2
+    },
+    {
+      "n": 8,
+      "action": "Click the Navigator menu item.",
+      "expected": "The Navigator panel expands showing available menu groups including Baxter GM View.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:27.472415+00:00",
+      "screenshot": "step_08.png",
+      "duration_seconds": 0.52
+    },
+    {
+      "n": 9,
+      "action": "Click on Baxter GM View.",
+      "expected": "The Baxter GM View menu group expands showing sub-menus including Sales.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:27.992132+00:00",
+      "screenshot": "step_09.png",
+      "duration_seconds": 0.88
+    },
+    {
+      "n": 10,
+      "action": "Click on Sales.",
+      "expected": "The Sales sub-menu expands showing options including Sales Order Entry.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:28.870952+00:00",
+      "screenshot": "step_10.png",
+      "duration_seconds": 0.91
+    },
+    {
+      "n": 11,
+      "action": "Click on Sales Order Entry.",
+      "expected": "The Sales Order Entry sub-menu expands showing order type options including Standard Order SO.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:29.793886+00:00",
+      "screenshot": "step_11.png",
+      "duration_seconds": 0.84
+    },
+    {
+      "n": 12,
+      "action": "Wait for 5 seconds for the Sales Order Entry menu to fully render.",
+      "expected": "The Sales Order Entry options are fully visible.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:30.650610+00:00",
+      "screenshot": "step_12.png",
+      "duration_seconds": 5.17
+    },
+    {
+      "n": 13,
+      "action": "Click on Standard Order SO.",
+      "expected": "The Standard Order SO - Customer Service Inquiry screen is displayed.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:35.845838+00:00",
+      "screenshot": "step_13.png",
+      "duration_seconds": 8.3
+    },
+    {
+      "n": 14,
+      "action": "Click the Add button on the Customer Service Inquiry screen.",
+      "expected": "The Standard Order SO - Sales Order Header form opens for new order entry.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:44.159646+00:00",
+      "screenshot": "step_14.png",
+      "duration_seconds": 3.98
+    },
+    {
+      "n": 15,
+      "action": "Wait for 2 seconds for the Sales Order Header form to load.",
+      "expected": "The Sales Order Header form is fully loaded with all input fields visible.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:48.174379+00:00",
+      "screenshot": "step_15.png",
+      "duration_seconds": 2.25
+    },
+    {
+      "n": 16,
+      "action": "Click the Sold To field (Long Address Number) on the Sales Order Header form.",
+      "expected": "The Sold To (Long Address Number) field is focused and ready for input.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:50.429420+00:00",
+      "screenshot": "step_16.png",
+      "duration_seconds": 0.38
+    },
+    {
+      "n": 17,
+      "action": "Enter the Sold To value in the Sold To (Long Address Number) field.",
+      "expected": "The Sold To value is entered in the field.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:50.814774+00:00",
+      "original_locator_candidates": [
+        {
+          "tag": "input",
+          "title": "Long Address Number",
+          "type": "text"
+        }
+      ],
+      "typing_target": {
+        "tag": "input",
+        "title": "Long Address Number",
+        "type": "text"
+      },
+      "screenshot": "step_17.png",
+      "duration_seconds": 0.66
+    },
+    {
+      "n": 18,
+      "action": "Press Tab to trigger field validation on the Sold To field.",
+      "expected": "The system validates the Sold To value and may auto-populate related fields such as customer name.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:51.494036+00:00",
+      "screenshot": "step_18.png",
+      "duration_seconds": 0.41
+    },
+    {
+      "n": 19,
+      "action": "Wait for 5 seconds for the Sold To field validation to complete.",
+      "expected": "The Sold To field validation is complete and related fields are populated.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:51.912145+00:00",
+      "screenshot": "step_19.png",
+      "duration_seconds": 5.17
+    },
+    {
+      "n": 20,
+      "action": "Click the Ship To field (Long Address Number-Shipto) on the Sales Order Header form.",
+      "expected": "The Ship To (Long Address Number-Shipto) field is focused and ready for input.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:57.090396+00:00",
+      "screenshot": "step_20.png",
+      "duration_seconds": 0.53
+    },
+    {
+      "n": 21,
+      "action": "Enter the Ship To value in the Ship To (Long Address Number-Shipto) field.",
+      "expected": "The Ship To value is entered in the field.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:57.646109+00:00",
+      "original_locator_candidates": [
+        {
+          "tag": "input",
+          "title": "Long Address Number-Shipto",
+          "type": "text"
+        }
+      ],
+      "typing_target": {
+        "tag": "input",
+        "title": "Long Address Number-Shipto",
+        "type": "text"
+      },
+      "screenshot": "step_21.png",
+      "duration_seconds": 0.75
+    },
+    {
+      "n": 22,
+      "action": "Press Tab to trigger field validation on the Ship To field.",
+      "expected": "The system validates the Ship To value and may auto-populate related address fields.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:58.413829+00:00",
+      "screenshot": "step_22.png",
+      "duration_seconds": 0.36
+    },
+    {
+      "n": 23,
+      "action": "Enter the Customer PO value in the Customer PO field.",
+      "expected": "The Customer PO value is entered in the Customer PO field.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:58.793773+00:00",
+      "original_locator_candidates": [
+        {
+          "tag": "div",
+          "title": "Customer PO",
+          "type": null
+        },
+        {
+          "tag": "input",
+          "title": "Customer PO",
+          "type": "text"
+        }
+      ],
+      "typing_target": {
+        "tag": "input",
+        "title": "Customer PO",
+        "type": "text"
+      },
+      "screenshot": "step_23.png",
+      "duration_seconds": 0.91
+    },
+    {
+      "n": 24,
+      "action": "Wait for 5 seconds for the Customer PO field entry to be processed.",
+      "expected": "The Customer PO value is accepted and the form is ready for submission.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:07:59.712367+00:00",
+      "screenshot": "step_24.png",
+      "duration_seconds": 5.25
+    },
+    {
+      "n": 25,
+      "action": "Click the OK button on the Sales Order Header form.",
+      "expected": "The Sales Order Header is saved and the system proceeds to the next step or displays a confirmation dialog.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:08:04.986761+00:00",
+      "screenshot": "step_25.png",
+      "duration_seconds": 0.55
+    },
+    {
+      "n": 26,
+      "action": "Wait for 5 seconds for the system to process the Sales Order Header submission.",
+      "expected": "The system processes the header and may display a confirmation or proceed to the detail entry screen.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:08:05.545948+00:00",
+      "screenshot": "step_26.png",
+      "duration_seconds": 5.14
+    },
+    {
+      "n": 27,
+      "action": "Click the OK button again if a second confirmation dialog is presented.",
+      "expected": "The second confirmation is accepted and the system proceeds to the Sales Order detail/line entry screen.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:08:10.709616+00:00",
+      "screenshot": "step_27.png",
+      "duration_seconds": 0.44
+    },
+    {
+      "n": 28,
+      "action": "Wait for 5 seconds for the Sales Order detail screen to load.",
+      "expected": "The Sales Order detail screen is displayed with the system-generated Sales Order Number visible in the Order Number field.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:08:11.171990+00:00",
+      "screenshot": "step_28.png",
+      "duration_seconds": 5.19
+    },
+    {
+      "n": 29,
+      "action": "Verify the system-generated Sales Order Number is displayed in the Order Number field.",
+      "expected": "A non-empty, system-generated Sales Order Number is visible in the Order Number field, confirming the order header was successfully created.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:08:16.366877+00:00",
+      "screenshot": "step_29.png",
+      "duration_seconds": 0.28
+    },
+    {
+      "n": 30,
+      "action": "Wait for 5 seconds for the Sales Order line entry section to be ready.",
+      "expected": "The Sales Order line entry area is fully loaded and ready for item entry.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:08:16.666836+00:00",
+      "grid_targets": [
+        {
+          "label": "Item Number",
+          "recipe": {
+            "column": "Item Number",
+            "strategy": "jde_grid_header",
+            "row_index": 0
+          },
+          "unique_visible_match": true
+        }
+      ],
+      "screenshot": "step_30.png",
+      "duration_seconds": 5.2
+    },
+    {
+      "n": 31,
+      "action": "Enter the Item Number value in the Item Number field on the Sales Order detail screen.",
+      "expected": "The Item Number is entered in the Item Number field.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:08:21.877598+00:00",
+      "grid_targets": [
+        {
+          "label": "Item Number",
+          "recipe": {
+            "column": "Item Number",
+            "strategy": "jde_grid_header",
+            "row_index": 0
+          },
+          "unique_visible_match": true
+        }
+      ],
+      "typing_target": {
+        "tag": "input",
+        "title": null,
+        "type": "text"
+      },
+      "screenshot": "step_31.png",
+      "duration_seconds": 0.64
+    },
+    {
+      "n": 32,
+      "action": "Enter the Unit Price value in the Unit Price field on the Sales Order detail screen.",
+      "expected": "The Unit Price is entered in the Unit Price field.",
+      "status": "executed_with_supplement",
+      "started_at": "2026-09-15T15:08:22.526974+00:00",
+      "original_status": "not_automated",
+      "diagnostic_supplement": {
+        "data_key": "unit_price",
+        "column": "Unit Price"
+      },
+      "grid_targets": [
+        {
+          "label": "Unit Price",
+          "recipe": {
+            "column": "Unit Price",
+            "strategy": "jde_grid_header",
+            "row_index": 0
+          },
+          "unique_visible_match": true
+        }
+      ],
+      "value_verified": true,
+      "original_skip_reason": "no matching element in element list",
+      "screenshot": "step_32.png",
+      "duration_seconds": 0.42
+    },
+    {
+      "n": 33,
+      "action": "Click the OK button to save the Sales Order line item.",
+      "expected": "The Sales Order line item is saved and the system confirms the order creation with the Sales Order Number displayed.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:08:22.960924+00:00",
+      "screenshot": "step_33.png",
+      "duration_seconds": 0.49
+    },
+    {
+      "n": 34,
+      "action": "Wait for 5 seconds for the Sales Order to be fully saved.",
+      "expected": "The Sales Order is fully saved. The system displays the completed Sales Order with the system-generated Order Number, confirming successful creation of the Standard Order SO.",
+      "status": "executed",
+      "started_at": "2026-09-15T15:08:23.457300+00:00",
+      "screenshot": "step_34.png",
+      "duration_seconds": 5.22
+    }
+  ],
+  "data_key_alias_resolution": [
+    {
+      "requested": "username",
+      "configured_keys": [
+        "username"
+      ]
+    },
+    {
+      "requested": "password",
+      "configured_keys": [
+        "password"
+      ]
+    },
+    {
+      "requested": "sold_to",
+      "configured_keys": [
+        "SoldTo"
+      ]
+    },
+    {
+      "requested": "ship_to",
+      "configured_keys": [
+        "ShipTo"
+      ]
+    },
+    {
+      "requested": "customer_po",
+      "configured_keys": [
+        "CustomerPO"
+      ]
+    },
+    {
+      "requested": "item_number",
+      "configured_keys": [
+        "ItemNumber"
+      ]
+    },
+    {
+      "requested": "unit_price",
+      "configured_keys": [
+        "UnitPrice"
+      ]
+    }
+  ],
+  "complete_business_verification": false,
+  "chrome": "151.0.7922.170",
+  "diagnostic_replay_completed": true,
+  "pending_commit_control_visible": false,
+  "final_business_result": "UNVERIFIED: original assertions do not prove persisted business data",
+  "final_screenshot": "step_99.png",
+  "script_unchanged": true
+}

@@ -1,0 +1,32 @@
+# import_aliases.yaml
+# Column name aliases for bulk test case import.
+# When a file has a column whose name matches any alias in a list,
+# it's treated as that field. Matching is case-insensitive and
+# ignores extra spaces.
+#
+# To add a new alias your team uses, add it to the list below.
+# No code change needed — just edit this file and restart.
+
+title_aliases:
+  - "Test Case"
+  - "Test Case Name"
+  - "Scenario"
+  - "Scenario Name"
+  - "Title"
+  - "Name"
+  - "Test Name"
+  - "TC Name"
+
+steps_aliases:
+  - "Steps"
+  - "Description"
+  - "Test Steps"
+  - "Step Description"
+  - "Test Description"
+  - "Details"
+  - "Instructions"
+
+# Anything not matched above is treated as metadata (Priority, Owner,
+# Tags, etc.) or test data (values to type into the app). The system
+# distinguishes these at read time by checking whether the column name
+# appears in any scenario's step text.

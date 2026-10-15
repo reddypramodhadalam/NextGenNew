@@ -1,0 +1,101 @@
+{
+  "started_at": "2026-09-15T15:47:19.433476+00:00",
+  "application_id": 7,
+  "proposal_id": 328,
+  "map_id": 71,
+  "stored_protocol_changed": false,
+  "original_final_step": {
+    "n": 34,
+    "step": "34. Wait for 5 seconds for the Sales Order to be fully saved.",
+    "action": null,
+    "matched": true,
+    "expected": "The Sales Order is fully saved. The system displays the completed Sales Order with the system-generated Order Number, confirming successful creation of the Standard Order SO.",
+    "data_input": null,
+    "element_hint": "input: Order Number (ifr-e1menuAppIframe-el-57)",
+    "wait_condition": "none"
+  },
+  "user_approved_review_endpoint": {
+    "n": 34,
+    "step": "Wait for the Order Acceptance screen. Do not submit the order.",
+    "action": null,
+    "matched": true,
+    "expected": "Order Acceptance is displayed and Place Order is visible. Final submission is outside this test.",
+    "data_input": null,
+    "element_hint": "Place Order",
+    "wait_condition": "element_visible"
+  },
+  "steps": [
+    {
+      "n": 1,
+      "action": "1. Launch the URL https://e1euut.aws.baxter.com/jde/E1Menu.maf in the browser.",
+      "expected": "The JD Edwards SSO login page is displayed.",
+      "status": "passed",
+      "duration_seconds": 25.41,
+      "screenshot": "step_01.png"
+    },
+    {
+      "n": 2,
+      "action": "2. Enter the SSO Username in the username field.",
+      "expected": "The SSO username is entered in the username field.",
+      "status": "passed",
+      "duration_seconds": 0.03,
+      "screenshot": "step_02.png"
+    },
+    {
+      "n": 3,
+      "action": "3. Click the Next button.",
+      "expected": "The page advances to the password entry step.",
+      "status": "passed",
+      "duration_seconds": 0.41,
+      "screenshot": "step_03.png"
+    },
+    {
+      "n": 4,
+      "action": "4. Enter the SSO Password in the password field.",
+      "expected": "The SSO password is entered in the password field.",
+      "status": "passed",
+      "duration_seconds": 0.03,
+      "screenshot": "step_04.png"
+    },
+    {
+      "n": 5,
+      "action": "5. Click the Sign in button.",
+      "expected": "Authentication is initiated and the MFA or confirmation prompt is displayed.",
+      "status": "passed",
+      "duration_seconds": 0.02,
+      "screenshot": "step_05.png"
+    },
+    {
+      "n": 6,
+      "action": "6. Click the Yes button on the Stay signed in prompt.",
+      "expected": "The JD Edwards home screen (E1Menu) is displayed.",
+      "status": "passed",
+      "duration_seconds": 0.02,
+      "screenshot": "step_06.png"
+    },
+    {
+      "n": 7,
+      "action": "7. Wait for 10 seconds for the JD Edwards home page to fully load.",
+      "expected": "The JD Edwards home page is fully loaded with the Navigator menu visible.",
+      "status": "passed",
+      "duration_seconds": 15.52,
+      "screenshot": "step_07.png"
+    },
+    {
+      "n": 8,
+      "action": "8. Click the Navigator menu item (el-23).",
+      "expected": "The Navigator panel expands showing available menu groups including Baxter GM View.",
+      "status": "failed",
+      "error_type": "TimeoutException",
+      "duration_seconds": 67.31,
+      "screenshot": "step_08.png"
+    }
+  ],
+  "order_submission_verified": false,
+  "generated_sha256": "0a53f1dd623cae795c270ef3419bf4cf95f686e0302f6a493ed4a032758fcfd0",
+  "generation_status": "runtime_failed",
+  "browser_version": "151.0.7922.170",
+  "review_workflow_passed": false,
+  "error_type": "TimeoutException",
+  "generated_artifact_unchanged": true
+}

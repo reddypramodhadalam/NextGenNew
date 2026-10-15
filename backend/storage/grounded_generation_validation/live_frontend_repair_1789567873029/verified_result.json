@@ -1,0 +1,50 @@
+{
+  "generated_artifacts_unchanged": {
+    "172": true,
+    "171": true,
+    "169": true
+  },
+  "source_steps_unchanged": true,
+  "source_tags_unchanged": true,
+  "only_replacement_ran": true,
+  "all_34_recorded_steps_passed": true,
+  "evidence_text_matches_source": true,
+  "place_order_clicked": false,
+  "screenshot_count": 14,
+  "all_referenced_screenshots_exist": true,
+  "final_ui_check_passed": true,
+  "business_persistence_verified": false,
+  "sso_rows_handled_by_canonical_preamble": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "executions": [
+    {
+      "id": 83,
+      "generation_id": 169,
+      "result": "fail",
+      "duration_ms": 42188,
+      "step_count": 0,
+      "screenshot_path": "screenshots\\20260915_142332_853"
+    },
+    {
+      "id": 84,
+      "generation_id": 169,
+      "result": "fail",
+      "duration_ms": 78219,
+      "step_count": 0,
+      "screenshot_path": "screenshots\\20260915_143756_204"
+    },
+    {
+      "id": 85,
+      "generation_id": 172,
+      "result": "pass",
+      "duration_ms": 191418,
+      "step_count": 34,
+      "screenshot_path": "screenshots\\20260916_195002_725"
+    }
+  ]
+}

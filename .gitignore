@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+.pytest_cache/
+
+# Local regression tests — intentionally excluded from Bitbucket
+/backend/test_generation_integration.py
+/backend/test_generation_map_selection.py
+/backend/test_generation_options.py
+/backend/test_generation_replacement.py
+/backend/test_grounded_generation.py
+/backend/test_workflow_cancellation.py
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+
+# Secrets — never commit
+.env
+.env.local
+
+# Per-application test data (contains usernames + encrypted credentials) — never commit
+/backend/test_data/applications/*.json
+
+# Runtime outputs (regenerated, don't belong in source)
+generated_tests/
+screenshots/
+*.xlsx
+
+# OS
+.DS_Store
+Thumbs.db
+.github/copilot-instructions.md

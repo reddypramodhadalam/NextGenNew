@@ -1,0 +1,190 @@
+.head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 22px; }
+.sub { color: var(--text-muted); font-size: 14px; margin-top: 4px; }
+.roleToggle { display: flex; background: var(--bg-input); border: 1px solid var(--border); border-radius: 10px; padding: 3px; gap: 2px; }
+.roleToggle button { border: none; background: none; padding: 8px 18px; border-radius: 7px; font-size: 14px; font-weight: 600; color: var(--text-muted); cursor: pointer; font-family: var(--font-body); transition: var(--transition); }
+.roleOn { background: var(--accent) !important; color: #fff !important; box-shadow: 0 2px 8px var(--accent-glow); }
+
+.kpiGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 15px; }
+/* Top-of-page summary cards (applications / scenarios / executions).
+   Reuses the same .kpi tile look, just a 3-up grid with its own bottom
+   margin so it reads as a distinct row above the role-specific KPIs. */
+.summaryGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 15px; }
+.kpi { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+.kpiLabel { font-size: 12px; color: var(--text-muted); font-weight: 500; margin-bottom: 12px; }
+.kpiVal { font-family: var(--font-display); font-size: 30px; font-weight: 600; letter-spacing: -0.02em; line-height: 1; }
+/* Number style for the Tokens & Cost tiles: same font, size and colour as the donut-centre numbers (.pieKpiNum). */
+
+/* Tokens & Cost table: numbers use the same display font and dark colour as the donut-centre numbers. */
+.aiNum { font-family: var(--font-mono); font-size: 14px; font-weight: 600; color: var(--text-primary); }
+/* Total row: tinted background and a stronger top border to separate it from the activity rows. */
+.aiTotalRow td { background: var(--bg-input); border-top: 1px solid var(--border-strong); }
+
+.kpiSub { font-size: 12px; color: var(--text-muted); margin-top: 8px; }
+
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.panelHead { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px 0; }
+.panelTitle { font-size: 16px; font-weight: 600; color: var(--text-primary); }
+.chip { font-size: 11px; color: var(--text-muted); background: var(--bg-input); border: 1px solid var(--border); padding: 3px 9px; border-radius: 20px; font-weight: 500; }
+/* Wraps the chip + optional "More" action together on the right side of
+   a panel header. A plain flex wrapper — panels without onMore render
+   just the chip inside it, so this changes nothing visually for them. */
+.panelHeadRight { display: flex; align-items: center; gap: 12px; }
+.moreBtn { font-size: 12px; font-weight: 600; color: var(--accent); background: none; border: none; padding: 0; cursor: pointer; font-family: var(--font-body); white-space: nowrap; }
+.moreBtn:hover { text-decoration: underline; }
+.panelBody { padding: 18px 20px 20px; }
+
+.trend { display: flex; align-items: flex-end; gap: 8px; height: 150px; }
+.trendCol { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; height: 100%; justify-content: flex-end; }
+.barStack { width: 100%; max-width: 38px; display: flex; flex-direction: column; border-radius: 5px 5px 0 0; overflow: hidden; min-height: 2px; }
+.barStack div { width: 100%; }
+.trendX { font-size: 11px; color: var(--text-muted); font-family: var(--font-mono); }
+.trendPct { font-size: 11px; color: var(--green); font-family: var(--font-mono); font-weight: 600; }
+
+.donutWrap { display: flex; align-items: center; gap: 22px; }
+.donut { position: relative; width: 130px; height: 130px; flex-shrink: 0; }
+.donutCenter { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; }
+.donutTotal { font-family: var(--font-display); font-size: 26px; font-weight: 600; color: var(--text-primary); }
+.donutCap { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.legend { display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.legendRow { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-secondary); }
+.legendDot { width: 9px; height: 9px; border-radius: 3px; }
+.lv { margin-left: auto; font-family: var(--font-mono); color: var(--text-secondary); font-weight: 500; }
+
+.allGreen { padding: 30px; text-align: center; color: var(--green); font-size: 14px; font-weight: 500; }
+.emptyChart { padding: 40px; text-align: center; color: var(--text-muted); font-size: 14px; }
+
+.recentList { display: flex; flex-direction: column; gap: 2px; }
+.recentRow { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+.recentRow:last-child { border-bottom: none; }
+.recentTitle { color: var(--text-primary); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.recentApp { color: var(--text-muted); font-size: 12px; }
+.recentTime { color: var(--text-muted); font-family: var(--font-mono); font-size: 11px; min-width: 48px; text-align: right; }
+
+.typeBars { display: flex; flex-direction: column; gap: 14px; }
+.typeRow { display: flex; align-items: center; gap: 12px; }
+.typeName { font-size: 12px; color: var(--text-secondary); text-transform: capitalize; min-width: 90px; }
+.typeTrack { flex: 1; height: 8px; background: var(--bg-input); border-radius: 4px; overflow: hidden; }
+.typeFill { height: 100%; border-radius: 4px; }
+.typeCount { font-family: var(--font-mono); font-size: 12px; color: var(--text-secondary); min-width: 28px; text-align: right; }
+
+.covBar { display: flex; align-items: center; gap: 9px; }
+.covTrack { flex: 1; max-width: 120px; height: 6px; background: var(--bg-input); border-radius: 3px; overflow: hidden; }
+.covFill { height: 100%; border-radius: 3px; }
+.covPct { font-family: var(--font-mono); font-size: 12px; color: var(--text-secondary); min-width: 34px; }
+
+/* Coverage by Application — expand/collapse to reveal per-module rows. */
+.expandCol { width: 28px; padding-right: 0 !important; }
+.expandBtn { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: none; border: none; cursor: pointer; color: var(--text-muted); font-size: 11px; padding: 0; line-height: 1; border-radius: 4px; }
+.expandBtn:hover { color: var(--text-primary); background: var(--bg-input); }
+.moduleRow td { background: var(--bg-input); font-size: 12px; color: var(--text-secondary); }
+.moduleName { padding-left: 28px !important; color: var(--text-secondary); }
+
+.riskList { display: flex; flex-direction: column; gap: 2px; }
+.riskRow { display: flex; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--border); }
+.riskRow:last-child { border-bottom: none; }
+.riskDot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.riskCrit { background: var(--red); }
+.riskHigh { background: var(--amber); }
+.riskApp { font-weight: 600; color: var(--text-primary); font-size: 14px; min-width: 130px; }
+.riskIssue { color: var(--text-secondary); font-size: 14px; }
+
+.errBox { padding: 24px; color: var(--amber); font-size: 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); }
+
+@media (max-width: 900px) { .kpiGrid { grid-template-columns: repeat(2,1fr); } .summaryGrid { grid-template-columns: 1fr; } .row2 { grid-template-columns: 1fr; } }
+
+.chartBox { height: 200px; width: 100%; }
+.legendRow2 { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 12px; justify-content: center; }
+.legendItem { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-secondary); }
+.legendItem b { color: var(--text-primary); }
+.dot { width: 9px; height: 9px; border-radius: 3px; flex-shrink: 0; display: inline-block; }
+.tip { background: var(--bg-card); border: 1px solid var(--border-strong); border-radius: 8px; padding: 8px 11px; box-shadow: var(--shadow); }
+.tipLabel { font-size: 11px; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 5px; }
+.tipRow { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-secondary); }
+.tipRow b { color: var(--text-primary); }
+
+.donutLayout { display: flex; align-items: center; gap: 28px; padding: 8px 4px; }
+.donutChart { position: relative; width: 170px; height: 170px; flex-shrink: 0; }
+.donutCenterAbs { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; pointer-events: none; }
+.donutNum { font-family: var(--font-display); font-size: 26px; font-weight: 600; color: var(--text-primary); line-height: 1; }
+.donutCap { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+.donutLegend { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+.donutLegendRow { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+.donutLegendName { color: var(--text-secondary); flex: 1; }
+.donutLegendVal { font-family: var(--font-mono); font-weight: 600; color: var(--text-primary); }
+
+/* Leadership view: 4 consolidated donut-chart KPI cards (Applications /
+   Total Scenarios / Executions / Pass Rate) — replaces what used to be
+   7 flat number tiles (SummaryCards + a 4-tile .kpiGrid). Every number
+   from those 7 tiles is still shown, just as a chart slice + legend row
+   instead of a standalone tile — nothing is dropped, only consolidated.
+   These classes are new and only referenced by LeadershipView; the
+   Engineer/Subscriber view's SummaryCards/.kpiGrid usage is untouched
+   and these rules do not affect it. Deliberately separate from
+   .donutLayout/.donutChart/etc. above (tuned for the Engineer view's
+   full-Panel-width Results Distribution chart) rather than reused, so
+   sizing one cannot accidentally affect the other.
+
+   2 cards per row (not 4): each card gets roughly double the width a
+   4-across layout would give it, which is what makes the larger,
+   better-proportioned donut below actually fit — cramming the same
+   donut into a narrower 4-across card is what caused the center
+   caption text to spill outward over the ring in the first version. */
+.pieCardGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 15px; }
+.pieKpiCard { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; display: flex; flex-direction: column; gap: 12px; }
+.pieKpiTitle { font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.pieKpiBody { display: flex; align-items: center; gap: 20px; min-width: 0; }
+/* Chart + its caption stacked as a column, OUTSIDE the ring entirely —
+   see the "inside or outside" comment on .pieKpiCenterAbs below for why
+   this replaced stacking both inside the donut's hole. */
+.pieKpiChartCol { display: flex; flex-direction: column; align-items: center; gap: 6px; flex-shrink: 0; }
+.pieKpiChart { position: relative; width: 140px; height: 140px; flex-shrink: 0; }
+/* Deliberately holds ONLY the number now — a single short line always
+   fits inside the ring's hole regardless of font size. The descriptive
+   caption ("under test", "total runs", ...) used to be stacked here too,
+   but a rectangular two-line text block doesn't respect a circular
+   boundary: even when it fits by height, its corners can still poke out
+   past the ring at top/bottom for a wide caption like "TOTAL RUNS" —
+   that was the text/ring overlap. Moving the caption to normal document
+   flow BELOW the chart (see .pieKpiCap) removes the conflict entirely:
+   the number stays INSIDE the ring, the caption sits OUTSIDE it. */
+.pieKpiCenterAbs { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; pointer-events: none; }
+.pieKpiNum { font-family: var(--font-display); font-size: 24px; font-weight: 600; color: var(--text-primary); line-height: 1; }
+.pieKpiCap { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; text-align: center; }
+.pieKpiLegend { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.pieKpiLegendRow { display: flex; align-items: center; gap: 7px; font-size: 12px; color: var(--text-secondary); }
+.pieKpiLegendName { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pieKpiLegendVal { font-family: var(--font-mono); font-weight: 600; color: var(--text-primary); font-size: 12px; white-space: nowrap; }
+@media (max-width: 720px) { .pieCardGrid { grid-template-columns: 1fr; } }
+
+/* Range + Test Type + Application filter bar — sits above the Execution
+   Trend / Results Distribution row (Engineer view only). */
+.filterBar { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; margin-bottom: 15px; padding: 10px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; }
+.filterGroup { display: flex; align-items: center; gap: 8px; }
+.filterLabel { font-size: 13px; color: var(--text-muted); font-weight: 500; white-space: nowrap; }
+.filterSelect { font-size: 12px; font-family: var(--font-body); font-weight: 400; color: var(--text-primary); background: var(--bg-input); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; cursor: pointer; transition: var(--transition); max-width: 200px; }
+.filterSelect:hover { border-color: var(--border-strong); }
+.filterSelect:focus { outline: none; border-color: var(--accent); }
+
+@media (max-width: 900px) { .filterBar { flex-direction: column; align-items: flex-start; gap: 12px; } .filterSelect { max-width: none; width: 100%; } }
+
+/* "More" modal — Failing Tests / Recent Runs full list. */
+.modalOverlay { position: fixed; inset: 0; background: rgba(15, 17, 21, 0.55); display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 24px; }
+.modalPanel { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; width: 100%; max-width: 780px; max-height: 82vh; display: flex; flex-direction: column; box-shadow: var(--shadow); }
+.modalHeader { display: flex; align-items: center; justify-content: space-between; padding: 18px 22px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+.modalTitle { font-size: 16px; font-weight: 600; color: var(--text-primary); }
+.modalClose { background: none; border: none; font-size: 16px; color: var(--text-muted); cursor: pointer; line-height: 1; padding: 6px; border-radius: 6px; }
+.modalClose:hover { color: var(--text-primary); background: var(--bg-input); }
+.modalBody { padding: 18px 22px 22px; overflow-y: auto; }
+.donutLegendPct { font-family: var(--font-mono); font-size: 12px; color: var(--text-muted); min-width: 40px; text-align: right; }
+
+/* NORMAL-WEIGHT NUMBERS: dashboard numbers use regular weight instead of semi-bold.
+   Placed at the end of the file so it overrides the earlier font-weight: 600 rules. */
+.kpiVal,
+.pieKpiNum,
+.donutNum,
+.donutLegendVal,
+.pieKpiLegendVal,
+.aiNum { font-weight: 400; }
+
+/* Chart tooltip values are <b> tags, which browsers render bold by default. */
+.tipRow b { font-weight: 400; }

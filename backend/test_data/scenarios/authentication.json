@@ -1,0 +1,5 @@
+{
+  "_comment": "Scenario-level test data for 'User authentication'. Scripts under this scenario read these keys. App-level keys (username, password) are inherited automatically.",
+  "invalid_password": "wrong_password",
+  "expected_error_contains": "do not match"
+}

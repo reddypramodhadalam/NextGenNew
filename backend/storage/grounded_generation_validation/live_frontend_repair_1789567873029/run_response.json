@@ -1,0 +1,373 @@
+{
+  "total": 1,
+  "passed": 1,
+  "results": [
+    {
+      "generation_id": 172,
+      "result": "pass",
+      "output": "============================= test session starts =============================\ncollecting ... collected 1 item\n\ngenerated_tests/test_328_Create_a_new_Standard_Order_SO_by_naviga_generation_172.py::test_approved_procedure PASSED\n\n======================== 1 passed in 184.40s (0:03:04) ========================\n",
+      "duration_ms": 191418,
+      "run_id": "20260916_195002_725",
+      "screenshot_dir": "screenshots\\20260916_195002_725",
+      "screenshots": [
+        "screenshots\\20260916_195002_725\\step_01_1__Launch_the_URL_https___e1euut_aws_bax.png",
+        "screenshots\\20260916_195002_725\\step_02_2__Enter_the_SSO_Username_in_the_usernam.png",
+        "screenshots\\20260916_195002_725\\step_03_3__Click_the_Next_button_.png",
+        "screenshots\\20260916_195002_725\\step_09_9__Click_on_Baxter_GM_View__el-60__.png",
+        "screenshots\\20260916_195002_725\\step_10_10__Click_on_Sales__el-173__.png",
+        "screenshots\\20260916_195002_725\\step_11_11__Click_on_Sales_Order_Entry__el-341__.png",
+        "screenshots\\20260916_195002_725\\step_13_13__Click_on_Standard_Order_SO__el-552__.png",
+        "screenshots\\20260916_195002_725\\step_14_14__Click_the_Add_button__ifr-e1menuAppI.png",
+        "screenshots\\20260916_195002_725\\step_18_18__Press_Tab_to_trigger_field_validatio.png",
+        "screenshots\\20260916_195002_725\\step_26_26__Wait_for_5_seconds_for_the_system_to.png",
+        "screenshots\\20260916_195002_725\\step_27_27__Click_the_OK_button_again__ifr-e1men.png",
+        "screenshots\\20260916_195002_725\\step_31_31__Enter_the_Item_Number_value_in_the_I.png",
+        "screenshots\\20260916_195002_725\\step_32_32__Enter_the_Unit_Price_value_in_the_Un.png",
+        "screenshots\\20260916_195002_725\\step_34_34__Wait_for_5_seconds_for_the_Sales_Ord.png"
+      ],
+      "step_results": [
+        {
+          "n": 1,
+          "action": "1. Launch the URL https://e1euut.aws.baxter.com/jde/E1Menu.maf in the browser.",
+          "expected": "The JD Edwards SSO login page is displayed.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:50:09.934017+05:30",
+          "duration_ms": 22811,
+          "screenshot": "step_01_1__Launch_the_URL_https___e1euut_aws_bax.png",
+          "error": ""
+        },
+        {
+          "n": 2,
+          "action": "2. Enter the SSO Username in the username field.",
+          "expected": "The SSO username is entered in the username field.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:50:33.673880+05:30",
+          "duration_ms": 8,
+          "screenshot": "step_02_2__Enter_the_SSO_Username_in_the_usernam.png",
+          "error": ""
+        },
+        {
+          "n": 3,
+          "action": "3. Click the Next button.",
+          "expected": "The page advances to the password entry step.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:50:34.456797+05:30",
+          "duration_ms": 17,
+          "screenshot": "step_03_3__Click_the_Next_button_.png",
+          "error": ""
+        },
+        {
+          "n": 4,
+          "action": "4. Enter the SSO Password in the password field.",
+          "expected": "The SSO password is entered in the password field.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:50:35.348738+05:30",
+          "duration_ms": 10,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 5,
+          "action": "5. Click the Sign in button.",
+          "expected": "Authentication is initiated and the MFA or confirmation prompt is displayed.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:50:35.495650+05:30",
+          "duration_ms": 30,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 6,
+          "action": "6. Click the Yes button on the Stay signed in prompt.",
+          "expected": "The JD Edwards home screen (E1Menu) is displayed.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:50:35.702830+05:30",
+          "duration_ms": 17,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 7,
+          "action": "7. Wait for 10 seconds for the JD Edwards home page to fully load.",
+          "expected": "The JD Edwards home page is fully loaded with the Navigator menu visible.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:50:35.847076+05:30",
+          "duration_ms": 11118,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 8,
+          "action": "8. Click the Navigator menu item (el-23).",
+          "expected": "The Navigator panel expands showing available menu groups including Baxter GM View.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:50:47.093233+05:30",
+          "duration_ms": 2961,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 9,
+          "action": "9. Click on Baxter GM View (el-60).",
+          "expected": "The Baxter GM View menu group expands showing sub-menus including Sales.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:50:50.185800+05:30",
+          "duration_ms": 6794,
+          "screenshot": "step_09_9__Click_on_Baxter_GM_View__el-60__.png",
+          "error": ""
+        },
+        {
+          "n": 10,
+          "action": "10. Click on Sales (el-173).",
+          "expected": "The Sales sub-menu expands showing options including Sales Order Entry.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:50:57.685468+05:30",
+          "duration_ms": 5204,
+          "screenshot": "step_10_10__Click_on_Sales__el-173__.png",
+          "error": ""
+        },
+        {
+          "n": 11,
+          "action": "11. Click on Sales Order Entry (el-341).",
+          "expected": "The Sales Order Entry sub-menu expands showing order type options including Standard Order SO.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:51:03.662022+05:30",
+          "duration_ms": 5843,
+          "screenshot": "step_11_11__Click_on_Sales_Order_Entry__el-341__.png",
+          "error": ""
+        },
+        {
+          "n": 12,
+          "action": "12. Wait for 5 seconds for the Sales Order Entry menu to fully render.",
+          "expected": "The Sales Order Entry options are fully visible.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:51:10.323761+05:30",
+          "duration_ms": 7186,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 13,
+          "action": "13. Click on Standard Order SO (el-552).",
+          "expected": "The Standard Order SO - Customer Service Inquiry screen is displayed.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:51:17.874846+05:30",
+          "duration_ms": 9270,
+          "screenshot": "step_13_13__Click_on_Standard_Order_SO__el-552__.png",
+          "error": ""
+        },
+        {
+          "n": 14,
+          "action": "14. Click the Add button (ifr-e1menuAppIframe-el-35) on the Customer Service Inquiry screen.",
+          "expected": "The Standard Order SO - Sales Order Header form opens for new order entry.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:51:27.738078+05:30",
+          "duration_ms": 4041,
+          "screenshot": "step_14_14__Click_the_Add_button__ifr-e1menuAppI.png",
+          "error": ""
+        },
+        {
+          "n": 15,
+          "action": "15. Wait for 2 seconds for the Sales Order Header form to load.",
+          "expected": "The Sales Order Header form is fully loaded with all input fields visible.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:51:32.281079+05:30",
+          "duration_ms": 4314,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 16,
+          "action": "16. Click the Sold To field (Long Address Number, ifr-e1menuAppIframe-el-71) on the Sales Order Header form.",
+          "expected": "The Sold To (Long Address Number) field is focused and ready for input.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:51:36.714666+05:30",
+          "duration_ms": 2089,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 17,
+          "action": "17. Enter the Sold To value in the Sold To (Long Address Number) field (ifr-e1menuAppIframe-el-71).",
+          "expected": "The Sold To value is entered in the field.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:51:38.927748+05:30",
+          "duration_ms": 3915,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 18,
+          "action": "18. Press Tab to trigger field validation on the Sold To field.",
+          "expected": "The system validates the Sold To value and may auto-populate related fields such as customer name.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:51:42.965320+05:30",
+          "duration_ms": 3955,
+          "screenshot": "step_18_18__Press_Tab_to_trigger_field_validatio.png",
+          "error": ""
+        },
+        {
+          "n": 19,
+          "action": "19. Wait for 5 seconds for the Sold To field validation to complete.",
+          "expected": "The Sold To field validation is complete and related fields are populated.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:51:47.434977+05:30",
+          "duration_ms": 6788,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 20,
+          "action": "20. Click the Ship To field (Long Address Number-Shipto, ifr-e1menuAppIframe-el-72) on the Sales Order Header form.",
+          "expected": "The Ship To (Long Address Number-Shipto) field is focused and ready for input.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:51:54.355257+05:30",
+          "duration_ms": 1544,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 21,
+          "action": "21. Enter the Ship To value in the Ship To (Long Address Number-Shipto) field (ifr-e1menuAppIframe-el-72).",
+          "expected": "The Ship To value is entered in the field.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:51:56.033978+05:30",
+          "duration_ms": 4685,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 22,
+          "action": "22. Press Tab to trigger field validation on the Ship To field.",
+          "expected": "The system validates the Ship To value and may auto-populate related address fields.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:52:00.834624+05:30",
+          "duration_ms": 2634,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 23,
+          "action": "23. Enter the Customer PO value in the Customer PO field (ifr-e1menuAppIframe-el-74).",
+          "expected": "The Customer PO value is entered in the Customer PO field.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:52:03.614806+05:30",
+          "duration_ms": 3651,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 24,
+          "action": "24. Wait for 5 seconds for the Customer PO field entry to be processed.",
+          "expected": "The Customer PO value is accepted and the form is ready for submission.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:52:07.336373+05:30",
+          "duration_ms": 7283,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 25,
+          "action": "25. Click the OK button (ifr-e1menuAppIframe-el-26) on the Sales Order Header form.",
+          "expected": "The Sales Order Header is saved and the system proceeds to the next step or displays a confirmation dialog.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:52:14.730871+05:30",
+          "duration_ms": 2646,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 26,
+          "action": "26. Wait for 5 seconds for the system to process the Sales Order Header submission.",
+          "expected": "The system processes the header and may display a confirmation or proceed to the detail entry screen.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:52:17.464956+05:30",
+          "duration_ms": 6269,
+          "screenshot": "step_26_26__Wait_for_5_seconds_for_the_system_to.png",
+          "error": ""
+        },
+        {
+          "n": 27,
+          "action": "27. Click the OK button again (ifr-e1menuAppIframe-el-26) if a second confirmation dialog is presented.",
+          "expected": "The second confirmation is accepted and the system proceeds to the Sales Order detail/line entry screen.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:52:24.204094+05:30",
+          "duration_ms": 8499,
+          "screenshot": "step_27_27__Click_the_OK_button_again__ifr-e1men.png",
+          "error": ""
+        },
+        {
+          "n": 28,
+          "action": "28. Wait for 5 seconds for the Sales Order detail screen to load.",
+          "expected": "The Sales Order detail screen is displayed with the system-generated Sales Order Number visible in the Order Number field.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:52:33.233859+05:30",
+          "duration_ms": 6361,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 29,
+          "action": "29. Verify the system-generated Sales Order Number is displayed in the Order Number field (ifr-e1menuAppIframe-el-57).",
+          "expected": "A non-empty, system-generated Sales Order Number is visible in the Order Number field, confirming the order header was successfully created.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:52:39.778969+05:30",
+          "duration_ms": 834,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 30,
+          "action": "30. Wait for 5 seconds for the Sales Order line entry section to be ready.",
+          "expected": "The Sales Order line entry area is fully loaded and ready for item entry.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:52:40.805707+05:30",
+          "duration_ms": 6299,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 31,
+          "action": "31. Enter the Item Number value in the Item Number field (ifr-e1menuAppIframe-el-122) on the Sales Order detail screen.",
+          "expected": "The Item Number is entered in the Item Number field.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:52:47.257743+05:30",
+          "duration_ms": 2698,
+          "screenshot": "step_31_31__Enter_the_Item_Number_value_in_the_I.png",
+          "error": ""
+        },
+        {
+          "n": 32,
+          "action": "32. Enter the Unit Price value in the Unit Price field on the Sales Order detail screen.",
+          "expected": "The Unit Price is entered in the Unit Price field.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:52:50.506653+05:30",
+          "duration_ms": 4079,
+          "screenshot": "step_32_32__Enter_the_Unit_Price_value_in_the_Un.png",
+          "error": ""
+        },
+        {
+          "n": 33,
+          "action": "33. Click the OK button to save the Sales Order line item.",
+          "expected": "The Sales Order line item is saved and the system confirms the order creation with the Sales Order Number displayed.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:52:55.052643+05:30",
+          "duration_ms": 3898,
+          "screenshot": "",
+          "error": ""
+        },
+        {
+          "n": 34,
+          "action": "34. Wait for 5 seconds for the Sales Order to be fully saved.",
+          "expected": "The Sales Order is fully saved. The system displays the completed Sales Order with the system-generated Order Number, confirming successful creation of the Standard Order SO.",
+          "status": "pass",
+          "started_at": "2026-09-16T19:52:59.113342+05:30",
+          "duration_ms": 7222,
+          "screenshot": "step_34_34__Wait_for_5_seconds_for_the_Sales_Ord.png",
+          "error": ""
+        }
+      ],
+      "environment": "default"
+    }
+  ]
+}

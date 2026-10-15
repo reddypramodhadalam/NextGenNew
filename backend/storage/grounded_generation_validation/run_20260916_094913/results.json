@@ -1,0 +1,47 @@
+{
+  "started_at": "2026-09-16T04:19:15.757145+00:00",
+  "application_id": 7,
+  "proposal_id": 328,
+  "map_id": 71,
+  "stored_protocol_changed": false,
+  "original_final_step": {
+    "n": 34,
+    "step": "34. Wait for 5 seconds for the Sales Order to be fully saved.",
+    "action": null,
+    "matched": true,
+    "expected": "The Sales Order is fully saved. The system displays the completed Sales Order with the system-generated Order Number, confirming successful creation of the Standard Order SO.",
+    "data_input": null,
+    "element_hint": "input: Order Number (ifr-e1menuAppIframe-el-57)",
+    "wait_condition": "none"
+  },
+  "user_approved_review_endpoint": {
+    "n": 34,
+    "step": "Wait for the Order Acceptance screen. Do not submit the order.",
+    "action": null,
+    "matched": true,
+    "expected": "Order Acceptance is displayed and Place Order is visible. Final submission is outside this test.",
+    "data_input": null,
+    "element_hint": "Place Order",
+    "wait_condition": "element_visible"
+  },
+  "steps": [
+    {
+      "n": 1,
+      "action": "1. Launch the URL https://e1euut.aws.baxter.com/jde/E1Menu.maf in the browser.",
+      "expected": "The JD Edwards SSO login page is displayed.",
+      "status": "failed",
+      "error_type": "TimeoutException",
+      "runtime_events": [],
+      "duration_seconds": 84.03,
+      "screenshot": "step_01.png"
+    }
+  ],
+  "generation_entry_point": "prototype",
+  "order_submission_verified": false,
+  "generated_sha256": "28ac78fa1e0ecf518036df9eaf326df7bb344ab9d30ca12ee8b460d79428f755",
+  "generation_status": "runtime_failed",
+  "browser_version": "153.0.8010.37",
+  "review_workflow_passed": false,
+  "error_type": "TimeoutException",
+  "generated_artifact_unchanged": true
+}

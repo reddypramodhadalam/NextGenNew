@@ -1,0 +1,226 @@
+/* ScenarioReview.module.css */
+
+.container {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: -0.15px;
+  color: var(--text-primary);
+  margin-bottom: 1px;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.headerActions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* Refined header buttons — quiet until hovered, sized to the header rather
+   than to the page's default button scale. */
+.headerActions button {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: 6px;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background .12s, color .12s, border-color .12s;
+}
+
+.headerActions button:hover {
+  background: var(--bg-input);
+  color: var(--text-primary);
+  border-color: var(--text-dimmer);
+}
+
+/* ── List — no fixed height, no scrollbar ─────────────────────────── */
+.list {
+  /* No max-height — let the page scroll naturally */
+}
+
+.empty {
+  padding: 40px 28px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 28px;
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.row:last-child { border-bottom: none; }
+
+.row:hover { background: rgba(124, 58, 237, 0.04); }
+
+.rowExcluded { opacity: 0.4; }
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--purple);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.rowContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.rowTitle {
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.45;
+}
+
+.rowCategory {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 3px;
+  text-transform: capitalize;
+}
+
+.prioritySelect {
+  background: var(--bg-input);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 12px;
+  padding: 5px 10px;
+  cursor: pointer;
+  outline: none;
+  flex-shrink: 0;
+  min-width: 140px;
+  transition: var(--transition);
+}
+
+.prioritySelect:focus {
+  border-color: var(--purple-light);
+  color: var(--text-primary);
+}
+
+.prioritySelect:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* ── Footer ──────────────────────────────────────────────────────── */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 28px;
+  border-top: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.selectedCount {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Expanded test-case steps */
+.stepTableWrap {
+  width: calc(100% - 64px);
+  margin: 0 20px 14px 44px;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.stepTable {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 12px;
+}
+
+.stepTable th {
+  padding: 9px 12px;
+  text-align: left;
+  color: var(--text-primary);
+  background: var(--bg-input);
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.stepTable td {
+  padding: 9px 12px;
+  vertical-align: top;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.stepTable tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.stepTable tbody tr:hover {
+  background: var(--bg-card-alt);
+}
+
+.stepTable th:first-child,
+.stepNumberCell {
+  width: 76px;
+  text-align: center;
+}
+
+.stepNumberCell {
+  color: var(--text-muted) !important;
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+
+.stepDescriptionCell {
+  width: 46%;
+}
+
+.stepExpectedCell {
+  color: var(--text-muted) !important;
+}
+
+.stepUnmatched {
+  display: block;
+  width: fit-content;
+  margin-top: 6px;
+  padding: 1px 6px;
+  color: var(--amber);
+  font-size: 11px;
+  border: 1px dashed color-mix(in srgb, var(--amber) 55%, var(--border));
+  border-radius: 5px;
+}

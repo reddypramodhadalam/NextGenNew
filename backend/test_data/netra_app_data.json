@@ -1,0 +1,7 @@
+{
+  "_comment": "App-level test data for Netra — shared by all scenarios. Edit here or via the UI. NEVER put real passwords in this file: use password_env to name an environment variable that holds the secret.",
+  "base_url": "https://www.saucedemo.com",
+  "valid_username": "standard_user",
+  "locked_username": "locked_out_user",
+  "password_env": "NETRA_PASSWORD"
+}

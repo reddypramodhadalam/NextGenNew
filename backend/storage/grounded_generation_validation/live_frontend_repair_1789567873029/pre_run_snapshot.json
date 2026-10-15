@@ -1,0 +1,53 @@
+{
+  "generations": [
+    {
+      "id": 172,
+      "generation_status": "success",
+      "test_verdict": null,
+      "is_stale": false,
+      "map_id": 71,
+      "script_path": "generated_tests\\test_328_Create_a_new_Standard_Order_SO_by_naviga_generation_172.py",
+      "file_sha256": "3f0eb7f018644c186ba1310589cfd0c682bcc6098c0c61bb7c7e1e154db9ec59",
+      "file_matches_db_normalized": true,
+      "original_34_steps_exact": true,
+      "final_operations": [
+        "_pause(5)",
+        "_assert_nonempty(driver, 'target_156')"
+      ]
+    },
+    {
+      "id": 171,
+      "generation_status": "success",
+      "test_verdict": null,
+      "is_stale": true,
+      "map_id": 71,
+      "script_path": "generated_tests\\test_328_Create_a_new_Standard_Order_SO_by_naviga_generation_171.py",
+      "file_sha256": "3f0eb7f018644c186ba1310589cfd0c682bcc6098c0c61bb7c7e1e154db9ec59",
+      "file_matches_db_normalized": true
+    },
+    {
+      "id": 170,
+      "generation_status": "incomplete",
+      "test_verdict": null,
+      "is_stale": false,
+      "map_id": null,
+      "script_path": null,
+      "file_sha256": null,
+      "file_matches_db_normalized": null
+    },
+    {
+      "id": 169,
+      "generation_status": "success",
+      "test_verdict": "pass",
+      "is_stale": true,
+      "map_id": null,
+      "script_path": "generated_tests\\test_328_Create_a_new_Standard_Order_SO_by_naviga.py",
+      "file_sha256": "59266f8eff8f5e0ebf9a9f17a5dff78910c2ff3f8b971696e0c1b01d964830ce",
+      "file_matches_db_normalized": true
+    }
+  ],
+  "source": {
+    "steps_sha256": "593789c8a91e15640d54c9a8b12d5dcad1f62aa7f9b94b9b7aa20f698c27f485",
+    "tags_sha256": "beacd825b60f9a411ea61b115976fb71363ddc914ea38b3fc5d081e716c77672"
+  }
+}

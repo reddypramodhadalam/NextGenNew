@@ -1,0 +1,185 @@
+/* AppShell.module.css — layout-only styles for the shell.
+   Colors come from globals.css tokens; this file only positions things. */
+/* FIXED SIDEBAR: the shell is exactly the window height and never scrolls.
+   Only .content scrolls, so the sidebar and top bar stay put. dvh avoids the
+   bottom of the sidebar being hidden by browser toolbars; vh is the fallback. */
+.shell { display:flex; height:100vh; height:100dvh; overflow:hidden; }
+.sidebar {
+  width:244px; flex-shrink:0; background:var(--bg-sidebar);
+  border-right:1px solid var(--border); display:flex; flex-direction:column;
+  height:100%;
+}
+.logoArea { padding:22px 20px 20px; border-bottom:1px solid var(--border); flex-shrink:0; }
+.logoRow { display:flex; align-items:center; gap:11px; }
+.logoMark { width:34px; height:34px; flex-shrink:0; display:grid; place-items:center; filter:drop-shadow(0 2px 8px var(--accent-glow)); }
+.brandText { line-height:1.1; }
+.brandName { font-family:var(--font-display); font-weight:700; font-size:18px; letter-spacing:-.02em; color:var(--text-primary);/* keep-size */ }
+.brandSub { font-size:11px; color:var(--text-dimmer); letter-spacing:.08em; text-transform:uppercase; font-weight:500; }
+/* FIXED SIDEBAR: the menu list scrolls by itself if the window is too short for every item. */
+.nav { padding:14px 12px; flex:1; min-height:0; overflow-y:auto; overflow-x:hidden; display:flex; flex-direction:column; gap:2px; }
+.navLabel { font-size:11px; letter-spacing:.09em; text-transform:uppercase; color:var(--text-dimmer); font-weight:600; padding:14px 12px 6px; }
+.navItem {
+  display:flex; align-items:center; gap:11px; padding:9px 12px; border-radius:var(--radius-sm);
+  color:var(--text-secondary); text-decoration:none; font-weight:500; font-size:14px;
+  cursor:pointer; transition:var(--transition); position:relative;
+}
+.navItem:hover { background:var(--bg-card-alt); color:var(--text-primary); }
+.navItemActive { background:var(--accent-glow); color:var(--accent); font-weight:600; }
+.navItemActive::before { content:''; position:absolute; left:-12px; top:50%; transform:translateY(-50%); width:3px; height:18px; background:var(--accent); border-radius:0 3px 3px 0; }
+.navIcon { font-size:18px; flex-shrink:0;/* keep-size */  }
+.navText { white-space:nowrap; }
+/* FIXED SIDEBAR: Settings and the user chip always stay visible at the bottom. */
+.sidebarFoot { padding:12px; border-top:1px solid var(--border); display:flex; flex-direction:column; gap:6px; flex-shrink:0; }
+.userChip { display:flex; align-items:center; gap:10px; padding:8px 10px; border-radius:var(--radius-sm); cursor:pointer; transition:var(--transition); }
+.userChip:hover { background:var(--bg-card-alt); }
+.avatar { width:30px; height:30px; border-radius:8px; flex-shrink:0; background:linear-gradient(135deg,var(--indigo),var(--shield)); display:grid; place-items:center; color:#fff; font-weight:600; font-size:12px; }
+.userMeta {
+  flex: 1;
+  min-width: 0;
+  line-height: 1.2;
+  overflow: hidden;
+}
+.userName {
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.userRole {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--text-dimmer);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* FIXED SIDEBAR: the main column fills the shell; its own content area is what scrolls. */
+.main { flex:1; min-width:0; min-height:0; height:100%; display:flex; flex-direction:column; }
+.topbar {
+  height:62px; flex-shrink:0; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:14px; padding:0 26px;
+  background:color-mix(in srgb, var(--bg-base) 82%, transparent); backdrop-filter:blur(12px); position:sticky; top:0; z-index:20;
+}
+.pageTitle { font-family:var(--font-display); font-size:16px; font-weight:600; letter-spacing:-.01em; color:var(--text-primary); }
+.spacer { flex:1; }
+.search { display:flex; align-items:center; gap:9px; background:var(--bg-input); border:1px solid var(--border); border-radius:10px; padding:8px 13px; width:300px; color:var(--text-dimmer); transition:var(--transition); }
+.search:focus-within { border-color:var(--accent); }
+.search input { background:none; border:none; outline:none; color:var(--text-primary); font-size:14px; width:100%; font-family:var(--font-body); }
+.themeToggle { display:flex; background:var(--bg-input); border:1px solid var(--border); border-radius:9px; padding:3px; gap:2px; }
+.themeToggle button { width:30px; height:29px; border:none; background:none; border-radius:6px; color:var(--text-dimmer); cursor:pointer; display:grid; place-items:center; transition:var(--transition); font-size:16px; }
+.themeOn { background:var(--bg-card) !important; color:var(--accent) !important; box-shadow:0 1px 3px rgba(0,0,0,0.1); }
+/* FIXED SIDEBAR: min-height:0 lets this flex child shrink to the window so overflow-y can scroll. */
+.content { padding:26px; flex:1; min-height:0; overflow-y:auto; }
+@media (max-width:900px){ .sidebar{ display:none; } }
+.askBtn {
+  display: inline-flex; align-items: center; gap: 7px; height: 37px; padding: 0 14px;
+  border-radius: 9px; border: 1px solid var(--border); background: var(--bg-card);
+  color: var(--text-secondary); font-size: 14px; font-weight: 600; cursor: pointer;
+  font-family: var(--font-body); transition: var(--transition); white-space: nowrap;
+}
+.askBtn svg { width: 15px; height: 15px; }
+.askBtn:hover { border-color: var(--accent); color: var(--accent); }
+.askBtnOn { background: var(--accent-glow); border-color: var(--accent); color: var(--accent); }
+
+/* ── collapsible navigation ─────────────────────────────────────────────
+   On a 1280px laptop the sidebar, the content and an open assistant panel
+   compete for the same width. The navigation is what a user needs least
+   while reading a long answer, so it is what gives way. */
+/* FIXED SIDEBAR: relative is only here so the collapse button can sit on the edge.
+   The sidebar no longer needs sticky, because the page itself no longer scrolls. */
+.sidebar { position: relative; transition: width 0.16s ease; }
+.navToggle {
+  position: absolute; top: 14px; right: -11px; z-index: 5;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--bg-card); border: 1px solid var(--border);
+  color: var(--text-muted); font-size: 14px; line-height: 1;
+  cursor: pointer; display: grid; place-items: center;
+  transition: var(--transition);
+}
+.navToggle:hover { border-color: var(--accent); color: var(--accent); }
+.sidebarNarrow { width: 68px; }
+/* Labels, section headings and the user's role are hidden rather than
+   removed, so nothing reflows and expanding restores the exact layout. */
+.sidebarNarrow .navText,
+.sidebarNarrow .navLabel,
+.sidebarNarrow .userMeta,
+.sidebarNarrow .brandText { display: none; }
+.sidebarNarrow .navItem { justify-content: center; padding: 10px 0; }
+.sidebarNarrow .logoRow,
+.sidebarNarrow .userChip { justify-content: center; }
+.sidebarNarrow .navItemActive::before { left: 0; }
+/* Nothing may spill out of a 68px rail — the overflow is what made the
+   collapsed state look broken rather than compact. */
+.sidebarNarrow, .sidebarNarrow * { overflow: hidden; text-overflow: clip; }
+/* FIXED SIDEBAR: the collapsed rail's menu still scrolls vertically in a short window. */
+.sidebarNarrow .nav { padding-left: 0; padding-right: 0; overflow-y: auto; overflow-x: hidden; }
+.sidebarNarrow .navIcon { margin: 0; }
+
+/* EVEN SIDEBAR: menu rows stretch equally to fill the height between the logo and Settings, so the
+   spacing between buttons is identical and there is no leftover gap. Rows never grow past 48px,
+   so in a very tall window they stay a normal size instead of becoming huge. */
+
+/* No scrollbar is drawn on the menu list. A very short window can still scroll it with the wheel. */
+.nav { scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+
+/* Each menu row grows equally. 6px is the smallest padding, used when the window is short. */
+.navItem {
+  flex: 1 1 auto;
+  max-height: 48px;
+  padding: 6px 12px;
+}
+
+/* The "Resources" heading keeps its own size and does not stretch. */
+.navLabel { flex: 0 0 auto; }
+
+/* The Settings row at the bottom is not part of the stretching list. */
+.sidebarFoot .navItem { flex: 0 0 auto; padding: 9px 12px; }
+
+/* The collapsed rail has no side padding, so it gets its own version. */
+.sidebarNarrow .navItem { padding: 6px 0; }
+.sidebarNarrow .sidebarFoot .navItem { padding: 10px 0; }
+
+/* Only in very short windows (about 480px tall or less): also tighten the logo area and hide the tagline. */
+@media (max-height: 480px) {
+  .logoArea { padding: 10px 20px 8px; }
+  .brandSub { display: none; }
+}
+
+/* NAV TOGGLE: keep the collapse button fully inside the sidebar so neither the top bar nor the
+   collapsed rail can clip it, and lift the sidebar above the top bar as a safety net. */
+.sidebar { z-index: 30; }
+
+.navToggle {
+  top: 14px;
+  right: 8px;
+}
+
+/* Slightly tighter tagline spacing so it doesn't run under the button. */
+.brandSub { letter-spacing: .05em; }
+
+/* Collapsed rail: the 68px width is too narrow to put the button beside the logo, so the logo
+   area gets extra height and the button sits centred underneath it. */
+.sidebarNarrow .logoArea { padding-bottom: 46px; }
+.sidebarNarrow .navToggle {
+  top: 62px;
+  right: 23px;
+}
+
+/* SIDEBAR HIGHLIGHT: hovering an item and the selected page share one highlight, so clicking an item
+   keeps exactly the look it had on hover. Font weight is also the same, so the text doesn't shift. */
+.navItem:hover,
+.navItemActive { background: var(--accent-glow); color: var(--accent); }
+.navItemActive { font-weight: 500; }
+
+/* The small bar on the left edge now shows on hover as well. */
+.navItem:hover::before {
+  content: ''; position: absolute; left: -12px; top: 50%; transform: translateY(-50%);
+  width: 3px; height: 18px; background: var(--accent); border-radius: 0 3px 3px 0;
+}
+
+/* Collapsed rail: the bar sits at the edge of the narrow sidebar. */
+.sidebarNarrow .navItem:hover::before { left: 0; }

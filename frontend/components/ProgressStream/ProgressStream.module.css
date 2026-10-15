@@ -1,0 +1,77 @@
+/* ProgressStream.module.css */
+
+.container {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-strong);
+  border-top-color: var(--purple);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+}
+
+.description {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.log {
+  padding: 16px 24px;
+  max-height: 320px;
+  overflow-y: auto;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logEmpty {
+  color: var(--text-dimmer);
+  font-style: italic;
+}
+
+.logLine {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.logStep {
+  color: var(--text-dimmer);
+  flex-shrink: 0;
+  min-width: 20px;
+}
+
+.logMsg {
+  color: var(--text-secondary);
+}

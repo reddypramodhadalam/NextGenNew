@@ -1,0 +1,533 @@
+/* NewTestSuite.module.css */
+
+/* Page takes full width — no max-width constraint causing scrollbars */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Review and Scripts are two-pane, data-heavy screens — let them use the
+   full content width instead of the narrow form column. */
+.pageWide {
+  max-width: 1600px;
+}
+
+/* Remains reachable above approval overlays, but below the script viewer. */
+.workflowHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+}
+
+.cancellationDialog {
+  margin: auto;
+  width: min(560px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  padding: 24px;
+  color: var(--text-primary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+}
+
+.cancellationDialog::backdrop {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.cancellationDialog h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.cancellationDialog p {
+  margin: 12px 0;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.cancellationDialog .cancellationError {
+  color: var(--red);
+}
+
+.cancellationActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* ── Step indicator ──────────────────────────────────────────────────── */
+.stepIndicator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.stepItem {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.stepItem:last-child { flex: 0; }
+
+.stepCircle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-dimmer);
+  background: var(--bg-card);
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.stepActive {
+  border-color: var(--purple);
+  color: var(--purple-light);
+  background: var(--purple-dim);
+}
+
+.stepDone {
+  border-color: var(--green);
+  color: var(--green);
+  background: rgba(74, 222, 128, 0.1);
+}
+
+.stepLabel {
+  font-size: 12px;
+  color: var(--text-dimmer);
+  margin-left: 8px;
+  white-space: nowrap;
+}
+
+.stepLabelActive {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.stepLine {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  margin: 0 10px;
+}
+
+.stepLineDone {
+  background: var(--green);
+  opacity: 0.4;
+}
+
+/* ── Section card ───────────────────────────────────────────────────── */
+.section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 26px;
+}
+
+.sectionHeader {
+  margin-bottom: 18px;
+}
+
+.sectionHeader h2 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.sectionHeader p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* ── Error banner ──────────────────────────────────────────────────── */
+.errorBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(248, 113, 113, 0.08);
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  border-radius: var(--radius);
+  padding: 13px 16px;
+  font-size: 14px;
+  color: var(--red);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.warningBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  color: #f59e0b;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.warningList {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  color: var(--text-secondary);
+}
+
+.warningList li {
+  margin: 2px 0;
+}
+
+/* ── SSO precheck status ───────────────────────────────────────────── */
+.ssoPrecheckBanner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: var(--radius);
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-card);
+  font-size: 12px;
+}
+
+.ssoPrecheckRunning {
+  border-color: rgba(245, 158, 11, 0.45);
+  color: #f59e0b;
+}
+
+.ssoPrecheckPassed {
+  border-color: rgba(34, 197, 94, 0.45);
+  color: #22c55e;
+}
+
+.ssoPrecheckFailed {
+  border-color: rgba(239, 68, 68, 0.45);
+  color: #ef4444;
+}
+
+/* ── Test type selection ────────────────────────────────────────────── */
+.testTypeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.testTypeCard {
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-input);
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.testTypeCard:hover {
+  border-color: var(--purple-light);
+  background: var(--purple-dim);
+}
+
+.testTypeCardSelected {
+  border-color: var(--purple);
+  background: rgba(124, 58, 237, 0.15);
+}
+
+.testTypeCheckbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--purple);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.testTypeLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+}
+
+.testTypeDesc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* ── Document type radio ────────────────────────────────────────────── */
+.docTypeRow {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.radioLabel input[type="radio"] {
+  accent-color: var(--purple);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+/* ── File dropzone ─────────────────────────────────────────────────── */
+.fileDropzone {
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  background: var(--bg-input);
+}
+
+.fileDropzone:hover {
+  border-color: var(--purple-light);
+  background: var(--purple-dim);
+}
+
+.fileEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.fileEmpty i {
+  font-size: 26px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.fileHint {
+  font-size: 12px;
+  color: var(--text-dimmer);
+}
+
+.fileSelected {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--purple-light);
+}
+
+.fileSelected i { font-size: 18px;/* keep-size */ }
+
+.removeFile {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 2px;
+  border-radius: 4px;
+  transition: var(--transition);
+  font-size: 16px;
+}
+
+.removeFile:hover { color: var(--red); }
+
+/* ── Actions row ──────────────────────────────────────────────────── */
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+/* ── Generated scripts table ──────────────────────────────────────── */
+.scriptsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.scriptsTable th {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 10px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+}
+
+.scriptsTable td {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.scriptsTable tr:last-child td { border-bottom: none; }
+.scriptsTable tr:hover td { background: rgba(124, 58, 237, 0.04); }
+
+.scriptTitle {
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.scriptRowActions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── Code editor modal ────────────────────────────────────────────── */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 900px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.modalTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.modalHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modalBody {
+  flex: 1;
+  overflow: auto;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 14px 20px;
+  border-top: 1px solid var(--border);
+}
+
+/* ── Report ─────────────────────────────────────────────────────────── */
+.reportHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 28px;
+  gap: 10px;
+}
+
+.reportIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(74, 222, 128, 0.12);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px; /* keep-size */
+  color: var(--green);
+}
+
+.reportHeader h2 { font-size: 16px; font-weight: 600; }
+.reportHeader p  { font-size: 14px; color: var(--text-secondary); }
+
+.reportMetrics {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 28px;
+  padding: 22px;
+  background: var(--bg-input);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.reportMetric { text-align: center; }
+
+.reportMetricValue {
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.reportMetricLabel {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.reportActions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}

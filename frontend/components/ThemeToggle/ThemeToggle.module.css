@@ -1,0 +1,22 @@
+.toggle {
+  display: flex;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  gap: 2px;
+}
+.toggle button {
+  width: 30px; height: 29px;
+  border: none; background: none; border-radius: 6px;
+  color: var(--text-muted); cursor: pointer;
+  display: grid; place-items: center;
+  transition: var(--transition);
+}
+.toggle button svg { width: 15px; height: 15px; }
+.toggle button:hover { color: var(--text-secondary); }
+.toggle button.on {
+  background: var(--bg-card);
+  color: var(--accent);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}

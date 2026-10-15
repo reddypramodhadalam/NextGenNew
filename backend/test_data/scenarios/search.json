@@ -1,0 +1,6 @@
+{
+  "_comment": "Scenario-level test data for 'Search edge cases'.",
+  "empty_query": "",
+  "nonsense_query": "zzzxxxqqq123",
+  "expected_no_results": true
+}

@@ -1,0 +1,65 @@
+{
+  "_comment": "Edit THIS file to change demo data. The seed script reads it and inserts into Postgres. Add/remove applications or scenarios here — never touch the Python code. This is the single source of truth for demo/seed data.",
+  "applications": [
+    {
+      "name": "Netra",
+      "base_url": "https://netra.baxter.internal",
+      "owner": "Data Platform Team",
+      "environment": "Staging",
+      "scenarios": [
+        {"title": "User logs in with valid credentials", "category": "positive", "priority": "P1", "status": "generated", "verdict": "pass"},
+        {"title": "Login rejected with invalid password", "category": "negative", "priority": "P1", "status": "generated", "verdict": "pass"},
+        {"title": "Conversational search returns matching records", "category": "positive", "priority": "P2", "status": "generated", "verdict": "pass"},
+        {"title": "Empty-state shown when search has no results", "category": "edge", "priority": "P3", "status": "generated", "verdict": "fail"},
+        {"title": "Export results to CSV includes all columns", "category": "positive", "priority": "P2", "status": "generated", "verdict": "pass"},
+        {"title": "Natural-language query handles ambiguous input", "category": "edge", "priority": "P3", "status": "proposed", "verdict": null}
+      ]
+    },
+    {
+      "name": "Baxter.com",
+      "base_url": "https://www.baxter.com",
+      "owner": "Digital Marketing",
+      "environment": "Production",
+      "scenarios": [
+        {"title": "Homepage loads and primary nav is visible", "category": "positive", "priority": "P1", "status": "generated", "verdict": "pass"},
+        {"title": "Product search returns relevant results", "category": "positive", "priority": "P1", "status": "generated", "verdict": "pass"},
+        {"title": "Contact form validates required fields", "category": "negative", "priority": "P2", "status": "generated", "verdict": "fail"},
+        {"title": "Region selector switches locale correctly", "category": "positive", "priority": "P2", "status": "generated", "verdict": "pass"}
+      ]
+    },
+    {
+      "name": "JD Edwards",
+      "base_url": "https://jde.baxter.internal",
+      "owner": "ERP Systems",
+      "environment": "Production",
+      "scenarios": [
+        {"title": "PO approval routes to approver on submit", "category": "positive", "priority": "P0", "status": "generated", "verdict": "pass"},
+        {"title": "Three-way match blocks mismatched invoice", "category": "negative", "priority": "P0", "status": "generated", "verdict": "pass"},
+        {"title": "Budget threshold warning on PO overage", "category": "boundary", "priority": "P1", "status": "generated", "verdict": "fail"},
+        {"title": "Supplier master update requires approval", "category": "positive", "priority": "P1", "status": "generated", "verdict": "pass"},
+        {"title": "Journal entry posts to correct ledger", "category": "positive", "priority": "P1", "status": "generated", "verdict": "pass"}
+      ]
+    },
+    {
+      "name": "MDM Portal",
+      "base_url": "https://mdm.baxter.internal",
+      "owner": "Master Data Team",
+      "environment": "Dev",
+      "scenarios": [
+        {"title": "Duplicate record detection flags matches", "category": "positive", "priority": "P0", "status": "generated", "verdict": "pass"},
+        {"title": "Unauthorised role denied record edit", "category": "security", "priority": "P0", "status": "generated", "verdict": "fail"},
+        {"title": "Data steward can approve pending change", "category": "positive", "priority": "P1", "status": "proposed", "verdict": null}
+      ]
+    }
+  ],
+  "trend_runs": {
+    "_comment": "Synthetic weekly execution history for the dashboard trend chart",
+    "weeks": [
+      {"label": "Wk 1", "passed": 12, "failed": 2, "skipped": 1},
+      {"label": "Wk 2", "passed": 14, "failed": 1, "skipped": 0},
+      {"label": "Wk 3", "passed": 11, "failed": 3, "skipped": 1},
+      {"label": "Wk 4", "passed": 15, "failed": 1, "skipped": 1},
+      {"label": "Wk 5", "passed": 13, "failed": 2, "skipped": 0}
+    ]
+  }
+}
